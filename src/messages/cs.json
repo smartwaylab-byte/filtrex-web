@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Úvod",
+    "products": "Produkty",
+    "references": "Reference",
+    "news": "Aktuality",
+    "contact": "Kontakt",
+    "inquiry": "Poptávka",
+    "cart": "Košík"
+  },
+  "hero": {
+    "headline": "Profesionální nano filtrace v potravinářství",
+    "subheadline": "Filtrujeme rostlinné oleje, kávu a kosmetiku. Jsme první výrobce v ČR, který používá nanovlákno pro filtraci.",
+    "cta_primary": "Prohlédnout produkty",
+    "cta_secondary": "Nezávazná poptávka"
+  },
+  "about": {
+    "title": "Kdo jsme",
+    "description": "Filtrex s.r.o. je český výrobce průmyslových deskových filtrů a nanovlákenných filtračních membrán. Naše technologie zajišťuje vysokou čistotu filtrovaných tekutin v potravinářství, kosmetice i farmacii.",
+    "badge": "První v ČR s nanovláknem",
+    "point1": "Filtrace rostlinných olejů",
+    "point2": "Filtrace kávy a nápojů",
+    "point3": "Filtrace kosmetiky a farmacie",
+    "point4": "Nerezová ocel, hygienické provedení"
+  },
+  "products": {
+    "title": "Naše produkty",
+    "subtitle": "Přesná filtrace pro náročné aplikace",
+    "view_all": "Zobrazit všechny produkty",
+    "add_to_cart": "Přidat do košíku",
+    "buy": "Koupit",
+    "price": "Cena",
+    "parameters": "Technické parametry",
+    "inquiry_cta": "Poptávka na míru",
+    "in_development": "Ve vývoji"
+  },
+  "references": {
+    "title": "Naši zákazníci",
+    "subtitle": "Naši filtraci používají výrobci v 5 zemích světa",
+    "view_all": "Všechny reference"
+  },
+  "news": {
+    "title": "Aktuality",
+    "subtitle": "Novinky z vývoje a praxe",
+    "read_more": "Číst dále",
+    "back": "Zpět na aktuality",
+    "no_posts": "Zatím žádné příspěvky."
+  },
+  "contact": {
+    "title": "Kontaktujte nás",
+    "subtitle": "Rádi zodpovíme vaše dotazy",
+    "name": "Jméno a příjmení",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "message": "Zpráva",
+    "send": "Odeslat zprávu",
+    "sending": "Odesílám...",
+    "success": "Zpráva byla odeslána. Ozveme se vám co nejdříve.",
+    "error": "Nepodařilo se odeslat zprávu. Zkuste to prosím znovu.",
+    "address": "Adresa",
+    "phone_label": "Telefon",
+    "email_label": "E-mail"
+  },
+  "inquiry": {
+    "title": "Nezávazná poptávka",
+    "subtitle": "Popište nám vaši potřebu, připravíme nabídku na míru",
+    "company": "Název firmy",
+    "name": "Kontaktní osoba",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "product": "Produkt / oblast zájmu",
+    "volume": "Odhadovaný objem filtrace (l/h)",
+    "liquid": "Filtrovaná tekutina",
+    "message": "Popis požadavku",
+    "send": "Odeslat poptávku",
+    "sending": "Odesílám...",
+    "success": "Poptávka byla odeslána. Ozveme se vám do 2 pracovních dnů.",
+    "error": "Nepodařilo se odeslat poptávku. Zkuste to prosím znovu."
+  },
+  "cart": {
+    "title": "Košík",
+    "empty": "Košík je prázdný",
+    "total": "Celkem",
+    "checkout": "Přejít k platbě",
+    "continue_shopping": "Pokračovat v nákupu",
+    "remove": "Odebrat",
+    "quantity": "Množství"
+  },
+  "footer": {
+    "tagline": "Spolehlivé a výkonné filtry",
+    "company": "Firma",
+    "legal": "Právní informace",
+    "privacy": "Ochrana osobních údajů",
+    "terms": "Obchodní podmínky",
+    "rights": "Všechna práva vyhrazena"
+  },
+  "common": {
+    "loading": "Načítám...",
+    "error": "Nastala chyba",
+    "back": "Zpět",
+    "more": "Více informací"
+  }
+}

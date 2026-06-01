@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "references": "Referenzen",
+    "news": "Neuigkeiten",
+    "contact": "Kontakt",
+    "inquiry": "Anfrage",
+    "cart": "Warenkorb"
+  },
+  "hero": {
+    "headline": "Professionelle Nanofiltration für die Lebensmittelindustrie",
+    "subheadline": "Wir filtern pflanzliche Öle, Kaffee und Kosmetika. Erster Hersteller in Tschechien mit Nanofasern für die Filtration.",
+    "cta_primary": "Produkte ansehen",
+    "cta_secondary": "Angebot anfragen"
+  },
+  "about": {
+    "title": "Wer wir sind",
+    "description": "Filtrex s.r.o. ist ein tschechischer Hersteller von industriellen Plattenfiltern und Nanofaser-Filtrationsmembranen. Unsere Technologie gewährleistet hohe Reinheit der gefilterten Flüssigkeiten in der Lebensmittelindustrie, Kosmetik und Pharmazie.",
+    "badge": "Erster in CZ mit Nanofasern",
+    "point1": "Filtration von pflanzlichen Ölen",
+    "point2": "Kaffee- und Getränkefiltration",
+    "point3": "Kosmetik- und Pharmaziefilration",
+    "point4": "Edelstahl, hygienische Ausführung"
+  },
+  "products": {
+    "title": "Unsere Produkte",
+    "subtitle": "Präzise Filtration für anspruchsvolle Anwendungen",
+    "view_all": "Alle Produkte ansehen",
+    "add_to_cart": "In den Warenkorb",
+    "buy": "Kaufen",
+    "price": "Preis",
+    "parameters": "Technische Parameter",
+    "inquiry_cta": "Individuelle Anfrage",
+    "in_development": "In Entwicklung"
+  },
+  "references": {
+    "title": "Unsere Kunden",
+    "subtitle": "Unsere Filtration wird von Herstellern in 5 Ländern verwendet",
+    "view_all": "Alle Referenzen"
+  },
+  "news": {
+    "title": "Neuigkeiten",
+    "subtitle": "Updates aus Entwicklung und Praxis",
+    "read_more": "Weiterlesen",
+    "back": "Zurück zu Neuigkeiten",
+    "no_posts": "Noch keine Beiträge."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir beantworten gerne Ihre Fragen",
+    "name": "Vor- und Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht gesendet. Wir melden uns so schnell wie möglich.",
+    "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+    "address": "Adresse",
+    "phone_label": "Telefon",
+    "email_label": "E-Mail"
+  },
+  "inquiry": {
+    "title": "Angebot anfragen",
+    "subtitle": "Beschreiben Sie Ihren Bedarf und wir erstellen ein individuelles Angebot",
+    "company": "Firmenname",
+    "name": "Kontaktperson",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "product": "Produkt / Interessensgebiet",
+    "volume": "Geschätztes Filtrationsvolumen (l/h)",
+    "liquid": "Zu filternde Flüssigkeit",
+    "message": "Beschreibung der Anforderungen",
+    "send": "Anfrage senden",
+    "sending": "Wird gesendet...",
+    "success": "Anfrage gesendet. Wir melden uns innerhalb von 2 Werktagen.",
+    "error": "Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist leer",
+    "total": "Gesamt",
+    "checkout": "Zur Kasse",
+    "continue_shopping": "Weiter einkaufen",
+    "remove": "Entfernen",
+    "quantity": "Menge"
+  },
+  "footer": {
+    "tagline": "Zuverlässige und leistungsstarke Filter",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "rights": "Alle Rechte vorbehalten"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "back": "Zurück",
+    "more": "Mehr Informationen"
+  }
+}

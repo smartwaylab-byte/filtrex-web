@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "references": "References",
+    "news": "News",
+    "contact": "Contact",
+    "inquiry": "Inquiry",
+    "cart": "Cart"
+  },
+  "hero": {
+    "headline": "Professional nano filtration for food industry",
+    "subheadline": "We filter vegetable oils, coffee and cosmetics. First manufacturer in the Czech Republic using nanofibers for filtration.",
+    "cta_primary": "View products",
+    "cta_secondary": "Request a quote"
+  },
+  "about": {
+    "title": "Who we are",
+    "description": "Filtrex s.r.o. is a Czech manufacturer of industrial plate filters and nanofiber filtration membranes. Our technology ensures high purity of filtered liquids in food industry, cosmetics and pharmaceuticals.",
+    "badge": "First in CZ with nanofibers",
+    "point1": "Vegetable oil filtration",
+    "point2": "Coffee and beverage filtration",
+    "point3": "Cosmetics and pharmaceutical filtration",
+    "point4": "Stainless steel, hygienic design"
+  },
+  "products": {
+    "title": "Our products",
+    "subtitle": "Precise filtration for demanding applications",
+    "view_all": "View all products",
+    "add_to_cart": "Add to cart",
+    "buy": "Buy",
+    "price": "Price",
+    "parameters": "Technical parameters",
+    "inquiry_cta": "Custom inquiry",
+    "in_development": "In development"
+  },
+  "references": {
+    "title": "Our customers",
+    "subtitle": "Our filtration is used by manufacturers in 5 countries",
+    "view_all": "All references"
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "Updates from development and practice",
+    "read_more": "Read more",
+    "back": "Back to news",
+    "no_posts": "No posts yet."
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "We will be happy to answer your questions",
+    "name": "Full name",
+    "email": "E-mail",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent. We will get back to you as soon as possible.",
+    "error": "Failed to send message. Please try again.",
+    "address": "Address",
+    "phone_label": "Phone",
+    "email_label": "E-mail"
+  },
+  "inquiry": {
+    "title": "Request a quote",
+    "subtitle": "Describe your needs and we will prepare a custom offer",
+    "company": "Company name",
+    "name": "Contact person",
+    "email": "E-mail",
+    "phone": "Phone",
+    "product": "Product / area of interest",
+    "volume": "Estimated filtration volume (l/h)",
+    "liquid": "Liquid to be filtered",
+    "message": "Description of requirements",
+    "send": "Send inquiry",
+    "sending": "Sending...",
+    "success": "Inquiry sent. We will get back to you within 2 business days.",
+    "error": "Failed to send inquiry. Please try again."
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "Proceed to checkout",
+    "continue_shopping": "Continue shopping",
+    "remove": "Remove",
+    "quantity": "Quantity"
+  },
+  "footer": {
+    "tagline": "Reliable and powerful filters",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy policy",
+    "terms": "Terms and conditions",
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "back": "Back",
+    "more": "More information"
+  }
+}
