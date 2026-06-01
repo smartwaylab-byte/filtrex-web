@@ -9,8 +9,12 @@ import { PortableText } from '@portabletext/react'
 export const revalidate = 60
 
 export async function generateStaticParams() {
-  const posts = await getPosts()
-  return posts.map((p) => ({ slug: p.slug.current }))
+  try {
+    const posts = await getPosts()
+    return posts.map((p) => ({ slug: p.slug.current }))
+  } catch {
+    return []
+  }
 }
 
 export default async function PostDetailPage({ params }: { params: Promise<{ slug: string }> }) {
