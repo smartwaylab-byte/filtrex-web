@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { resend, CONTACT_EMAIL } from '@/lib/resend'
+import { getResend, CONTACT_EMAIL } from '@/lib/resend'
 import { z } from 'zod'
 
 const schema = z.object({
@@ -20,6 +20,7 @@ export async function POST(req: NextRequest) {
 
   const { company, name, email, phone, product, volume, liquid, message } = parsed.data
 
+  const resend = getResend()
   await resend.emails.send({
     from: 'web@filtrex.cz',
     to: CONTACT_EMAIL,

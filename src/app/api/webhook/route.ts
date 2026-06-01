@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getStripe } from '@/lib/stripe'
-import { resend, CONTACT_EMAIL } from '@/lib/resend'
+import { getResend, CONTACT_EMAIL } from '@/lib/resend'
 import Stripe from 'stripe'
 
 export const runtime = 'nodejs'
@@ -20,6 +20,7 @@ export async function POST(req: NextRequest) {
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object as Stripe.Checkout.Session
 
+    const resend = getResend()
     await resend.emails.send({
       from: 'objednavky@filtrex.cz',
       to: CONTACT_EMAIL,
