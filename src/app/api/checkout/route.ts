@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import type { CartItem } from '@/store/cart'
 
 export async function POST(req: NextRequest) {
@@ -21,6 +21,7 @@ export async function POST(req: NextRequest) {
     )
   }
 
+  const stripe = getStripe()
   const session = await stripe.checkout.sessions.create({
     mode: 'payment',
     line_items: lineItems,
