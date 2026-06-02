@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import { useTranslations, useLocale } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { getProductBySlug, products } from '@/lib/products'
 import AddToCart from '@/components/products/AddToCart'
 import type { Metadata } from 'next'
@@ -21,13 +21,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const product = getProductBySlug(slug)
   if (!product) notFound()
 
-  return (
-    <ProductDetailClient product={product} />
-  )
-}
-
-function ProductDetailClient({ product }: { product: ReturnType<typeof getProductBySlug> & {} }) {
-  const t = useTranslations('products')
+  const t = await getTranslations('products')
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -52,7 +46,9 @@ function ProductDetailClient({ product }: { product: ReturnType<typeof getProduc
         {/* Info */}
         <div>
           {product.inDevelopment && (
-            <span className="inline-block bg-amber-100 text-amber-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">{t('in_development')}</span>
+            <span className="inline-block bg-amber-100 text-amber-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+              {t('in_development')}
+            </span>
           )}
           <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
           <p className="text-gray-600 mb-8 leading-relaxed whitespace-pre-line">{product.description}</p>
