@@ -32,7 +32,9 @@
     "price": "Cena",
     "parameters": "Technické parametry",
     "inquiry_cta": "Poptávka na míru",
-    "in_development": "Ve vývoji"
+    "in_development": "Ve vývoji",
+    "quantity": "Počet kusů",
+    "added_to_cart": "Přidáno do košíku"
   },
   "references": {
     "title": "Naši zákazníci",

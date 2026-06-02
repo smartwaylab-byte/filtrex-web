@@ -32,7 +32,9 @@
     "price": "Price",
     "parameters": "Technical parameters",
     "inquiry_cta": "Custom inquiry",
-    "in_development": "In development"
+    "in_development": "In development",
+    "quantity": "Quantity",
+    "added_to_cart": "Added to cart"
   },
   "references": {
     "title": "Our customers",

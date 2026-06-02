@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useCartStore } from '@/store/cart'
 import type { Product } from '@/lib/products'
@@ -7,6 +8,8 @@ import type { Product } from '@/lib/products'
 export default function AddToCart({ product }: { product: Product }) {
   const t = useTranslations('products')
   const addItem = useCartStore((s) => s.addItem)
+  const [qty, setQty] = useState(1)
+  const [added, setAdded] = useState(false)
 
   function handleAdd() {
     addItem({
@@ -15,7 +18,9 @@ export default function AddToCart({ product }: { product: Product }) {
       price: product.price,
       image: product.images[0],
       stripePriceId: product.stripePriceId,
-    })
+    }, qty)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 2000)
   }
 
   return (
@@ -27,11 +32,35 @@ export default function AddToCart({ product }: { product: Product }) {
             : `${product.price.toLocaleString('cs-CZ')} Kč`}
         </span>
       </div>
+
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-medium text-gray-700">{t('quantity')}:</span>
+        <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+          <button
+            onClick={() => setQty((q) => Math.max(1, q - 1))}
+            className="w-9 h-9 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors"
+          >
+            −
+          </button>
+          <span className="w-10 text-center font-semibold text-gray-900">{qty}</span>
+          <button
+            onClick={() => setQty((q) => q + 1)}
+            className="w-9 h-9 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors"
+          >
+            +
+          </button>
+        </div>
+      </div>
+
       <button
         onClick={handleAdd}
-        className="w-full py-4 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors text-base"
+        className={`w-full py-4 font-semibold rounded-xl transition-colors text-base ${
+          added
+            ? 'bg-green-100 text-green-800 border border-green-300'
+            : 'bg-green-700 text-white hover:bg-green-800'
+        }`}
       >
-        {t('add_to_cart')}
+        {added ? t('added_to_cart') : t('add_to_cart')}
       </button>
     </div>
   )
