@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { products } from '@/lib/products'
@@ -13,14 +13,14 @@ export default function ProductsPreview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t('title')}</h2>
-          <p className="text-lg text-gray-600">{t('subtitle')}</p>
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-brand-light text-brand-dark text-base font-medium">{t('subtitle')}</span>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product) => (
             <div
               key={product.id}
-              className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-green-300 hover:shadow-lg transition-all"
+              className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-brand/40 hover:shadow-lg transition-all"
             >
               {/* Image */}
               <div className="aspect-[4/3] bg-gray-50 relative overflow-hidden">
@@ -51,7 +51,7 @@ export default function ProductsPreview() {
                 <p className="text-gray-600 text-sm mb-4">{product.shortDescription}</p>
                 <Link
                   href={`${prefix}/produkty/${product.slug}`}
-                  className="inline-flex items-center text-green-700 font-semibold text-sm hover:text-green-800 transition-colors"
+                  className="inline-flex items-center text-brand font-semibold text-sm hover:text-brand-dark transition-colors"
                 >
                   {t('more') ?? 'Více informací'}
                   <svg className="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ export default function ProductsPreview() {
         <div className="text-center mt-10">
           <Link
             href={`${prefix}/produkty`}
-            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-green-700 text-green-700 font-semibold rounded-lg hover:bg-green-700 hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-brand text-brand font-semibold rounded-lg hover:bg-brand-yellow hover:text-gray-900 transition-colors"
           >
             {t('view_all')}
           </Link>

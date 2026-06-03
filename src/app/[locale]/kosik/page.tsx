@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
@@ -28,7 +28,7 @@ export default function CartPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
         <h1 className="text-2xl font-bold text-gray-900 mb-4">{t('empty')}</h1>
-        <Link href={`${prefix}/produkty`} className="inline-flex items-center px-6 py-3 bg-green-700 text-white font-semibold rounded-lg hover:bg-green-800 transition-colors">
+        <Link href={`${prefix}/produkty`} className="inline-flex items-center px-6 py-3 bg-brand-yellow text-gray-900 font-semibold rounded-lg hover:bg-amber-500 transition-colors">
           {t('continue_shopping')}
         </Link>
       </div>
@@ -74,7 +74,7 @@ export default function CartPage() {
         </div>
         <button
           onClick={handleCheckout}
-          className="w-full py-4 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors"
+          className="w-full py-4 bg-brand-yellow text-gray-900 font-semibold rounded-xl hover:bg-amber-500 transition-colors"
         >
           {t('checkout')}
         </button>

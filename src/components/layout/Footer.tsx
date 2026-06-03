@@ -1,4 +1,5 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 
 export default function Footer() {
@@ -13,9 +14,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 font-bold text-xl text-white mb-3">
-              <span className="text-green-500">|||</span>
-              <span>FILTREX</span>
+            <div className="mb-3 inline-block bg-white px-3 py-2">
+              <Image
+                src="/logo.jpg"
+                alt="Filtrex s.r.o."
+                width={120}
+                height={44}
+                className="h-8 w-auto object-contain"
+              />
             </div>
             <p className="text-sm text-gray-400">{t('tagline')}</p>
             <p className="text-sm text-gray-400 mt-4">

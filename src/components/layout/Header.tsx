@@ -1,7 +1,8 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import CartIcon from './CartIcon'
@@ -29,9 +30,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={prefix || '/'} className="flex items-center gap-2 font-bold text-xl tracking-tight">
-            <span className="text-green-700">|||</span>
-            <span className="text-gray-900">FILTREX</span>
+          <Link href={prefix || '/'} className="flex items-center">
+            <Image
+              src="/logo.jpg"
+              alt="Filtrex s.r.o."
+              width={140}
+              height={52}
+              priority
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -40,7 +47,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-green-700 transition-colors"
+                className="text-sm font-medium text-gray-700 hover:text-brand transition-colors"
               >
                 {link.label}
               </Link>
@@ -53,14 +60,14 @@ export default function Header() {
             <CartIcon />
             <Link
               href={`${prefix}/poptavka`}
-              className="hidden sm:inline-flex items-center px-4 py-2 bg-green-700 text-white text-sm font-medium rounded-md hover:bg-green-800 transition-colors"
+              className="hidden sm:inline-flex items-center px-4 py-2 bg-brand-yellow text-gray-900 text-sm font-medium rounded-md hover:bg-amber-500 transition-colors"
             >
               {t('inquiry')}
             </Link>
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-md text-gray-700 hover:text-green-700"
+              className="md:hidden p-2 rounded-md text-gray-700 hover:text-brand"
               aria-label="Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +90,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-2 text-sm font-medium text-gray-700 hover:text-green-700"
+              className="block py-2 text-sm font-medium text-gray-700 hover:text-brand"
             >
               {link.label}
             </Link>
@@ -91,7 +98,7 @@ export default function Header() {
           <Link
             href={`${prefix}/poptavka`}
             onClick={() => setMobileOpen(false)}
-            className="block py-2 text-sm font-medium text-green-700"
+            className="block py-2 text-sm font-medium text-brand"
           >
             {t('inquiry')}
           </Link>

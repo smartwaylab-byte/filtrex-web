@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 
 export default function Hero() {
@@ -11,13 +11,13 @@ export default function Hero() {
       {/* Tmavá hero sekce – jen nadpis + tlačítka */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[linear-gradient(30deg,#15803d_12%,transparent_12.5%,transparent_87%,#15803d_87.5%,#15803d),linear-gradient(150deg,#15803d_12%,transparent_12.5%,transparent_87%,#15803d_87.5%,#15803d),linear-gradient(30deg,#15803d_12%,transparent_12.5%,transparent_87%,#15803d_87.5%,#15803d),linear-gradient(150deg,#15803d_12%,transparent_12.5%,transparent_87%,#15803d_87.5%,#15803d)] bg-[length:80px_140px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(30deg,#D4701E_12%,transparent_12.5%,transparent_87%,#D4701E_87.5%,#D4701E),linear-gradient(150deg,#D4701E_12%,transparent_12.5%,transparent_87%,#D4701E_87.5%,#D4701E),linear-gradient(30deg,#D4701E_12%,transparent_12.5%,transparent_87%,#D4701E_87.5%,#D4701E),linear-gradient(150deg,#D4701E_12%,transparent_12.5%,transparent_87%,#D4701E_87.5%,#D4701E)] bg-[length:80px_140px]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-700/30 border border-green-600/50 text-green-400 text-sm font-medium mb-6">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow border border-brand-yellow text-gray-900 text-sm font-medium mb-6">
+              <span className="w-2 h-2 rounded-full bg-gray-700 animate-pulse" />
               Filtrex s.r.o.
             </span>
 
@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`${prefix}/produkty`}
-              className="inline-flex items-center justify-center px-8 py-4 bg-green-700 text-white font-semibold rounded-lg hover:bg-green-800 transition-colors text-base"
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-yellow text-gray-900 font-semibold rounded-lg hover:bg-amber-500 transition-colors text-base"
             >
               {t('cta_primary')}
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export default function Hero() {
             </Link>
             <Link
               href={`${prefix}/poptavka`}
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-green-600 hover:text-green-700 transition-colors text-base"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-brand hover:text-brand transition-colors text-base"
             >
               {t('cta_secondary')}
             </Link>
@@ -57,13 +57,13 @@ export default function Hero() {
           {/* Statistiky */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-2 border-t border-gray-100">
             {[
-              { value: '20+', label: 'let zkušeností' },
+              { value: '30+', label: 'let zkušeností' },
               { value: '12', label: 'zákazníků ve světě' },
               { value: '5', label: 'zemí' },
               { value: '#1', label: 'nanovlákno v ČR' },
             ].map((stat) => (
-              <div key={stat.label} className="border-l-2 border-green-600 pl-4">
-                <div className="text-3xl font-bold text-green-700">{stat.value}</div>
+              <div key={stat.label} className="border-l-2 border-brand pl-4">
+                <div className="text-3xl font-bold text-brand">{stat.value}</div>
                 <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
               </div>
             ))}

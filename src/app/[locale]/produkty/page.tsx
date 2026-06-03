@@ -1,4 +1,4 @@
-import { useTranslations, useLocale } from 'next-intl'
+﻿import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 import { products } from '@/lib/products'
@@ -17,7 +17,7 @@ export default function ProductsPage() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product) => (
-          <div key={product.id} className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-green-300 hover:shadow-lg transition-all">
+          <div key={product.id} className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-brand/40 hover:shadow-lg transition-all">
             <div className="aspect-[4/3] bg-gray-50 relative">
               {product.images[0] ? (
                 <Image src={product.images[0]} alt={product.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-300" />
@@ -37,7 +37,7 @@ export default function ProductsPage() {
               <p className="text-gray-600 text-sm mb-6">{product.shortDescription}</p>
               <Link
                 href={`${prefix}/produkty/${product.slug}`}
-                className="inline-flex w-full items-center justify-center px-4 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
+                className="inline-flex w-full items-center justify-center px-4 py-2.5 bg-brand-yellow text-gray-900 font-medium rounded-lg hover:bg-amber-500 transition-colors text-sm"
               >
                 {t('more') ?? 'Více informací'}
               </Link>

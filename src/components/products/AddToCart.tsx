@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -28,7 +28,7 @@ export default function AddToCart({ product }: { product: Product }) {
       <div className="flex items-center gap-3">
         <span className="text-2xl font-bold text-gray-900">
           {product.price === 0
-            ? <span className="text-green-700 text-lg font-semibold">{t('inquiry_cta')}</span>
+            ? <span className="text-brand text-lg font-semibold">{t('inquiry_cta')}</span>
             : `${product.price.toLocaleString('cs-CZ')} Kč`}
         </span>
       </div>
@@ -56,8 +56,8 @@ export default function AddToCart({ product }: { product: Product }) {
         onClick={handleAdd}
         className={`w-full py-4 font-semibold rounded-xl transition-colors text-base ${
           added
-            ? 'bg-green-100 text-green-800 border border-green-300'
-            : 'bg-green-700 text-white hover:bg-green-800'
+            ? 'bg-brand-light text-brand-dark border border-brand/40'
+            : 'bg-brand-yellow text-gray-900 hover:bg-amber-500'
         }`}
       >
         {added ? t('added_to_cart') : t('add_to_cart')}

@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+﻿import { useTranslations } from 'next-intl'
 
 const references = [
   { name: 'IREL s.r.o.', url: 'https://irel.eu', country: 'CZ', category: 'Rostlinné oleje' },
@@ -16,11 +16,19 @@ const references = [
 ]
 
 const countryLabel: Record<string, string> = {
-  CZ: 'Česká republika 🇨🇿',
-  SK: 'Slovensko 🇸🇰',
-  LT: 'Litva 🇱🇹',
-  IN: 'Indie 🇮🇳',
-  RO: 'Rumunsko 🇷🇴',
+  CZ: 'Česká republika',
+  SK: 'Slovensko',
+  LT: 'Litva',
+  IN: 'Indie',
+  RO: 'Rumunsko',
+}
+
+const countryFlagUrl: Record<string, string> = {
+  CZ: 'https://flagcdn.com/32x24/cz.png',
+  SK: 'https://flagcdn.com/32x24/sk.png',
+  LT: 'https://flagcdn.com/32x24/lt.png',
+  IN: 'https://flagcdn.com/32x24/in.png',
+  RO: 'https://flagcdn.com/32x24/ro.png',
 }
 
 const byCountry = references.reduce<Record<string, typeof references>>((acc, ref) => {
@@ -42,7 +50,11 @@ export default function ReferencePage() {
       <div className="space-y-12">
         {Object.entries(byCountry).map(([country, refs]) => (
           <div key={country}>
-            <h2 className="text-xl font-semibold text-gray-700 mb-4 pb-2 border-b border-gray-200">
+            <h2 className="text-xl font-semibold text-gray-700 mb-4 pb-2 border-b border-gray-200 flex items-center gap-3">
+              {countryFlagUrl[country] && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={countryFlagUrl[country]} alt={country} width={32} height={24} className="rounded-sm shadow-sm" />
+              )}
               {countryLabel[country] ?? country}
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -52,11 +64,11 @@ export default function ReferencePage() {
                   href={ref.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-xl border border-gray-200 p-5 hover:border-green-300 hover:shadow-md transition-all group"
+                  className="bg-white rounded-xl border border-gray-200 p-5 hover:border-brand/40 hover:shadow-md transition-all group"
                 >
-                  <p className="font-semibold text-gray-900 group-hover:text-green-700 transition-colors">{ref.name}</p>
+                  <p className="font-semibold text-gray-900 group-hover:text-brand transition-colors">{ref.name}</p>
                   <p className="text-sm text-gray-500 mt-1">{ref.category}</p>
-                  <p className="text-xs text-green-700 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="text-xs text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
                     {ref.url.replace('https://', '')} →
                   </p>
                 </a>

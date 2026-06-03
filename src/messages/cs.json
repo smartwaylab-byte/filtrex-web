@@ -9,23 +9,23 @@
     "cart": "Košík"
   },
   "hero": {
-    "headline": "Profesionální nano filtrace v potravinářství",
-    "subheadline": "Filtrujeme rostlinné oleje, kávu a kosmetiku. Jsme první výrobce v ČR, který používá nanovlákno pro filtraci.",
+    "headline": "Deskové filtry s nanovláknem",
+    "subheadline": "Filtrujeme rostlinné oleje, kávu, nápoje a kosmetiku. Jsme první výrobce v ČR, který používá nanovlákno pro filtraci v potravinářství.",
     "cta_primary": "Prohlédnout produkty",
     "cta_secondary": "Nezávazná poptávka"
   },
   "about": {
     "title": "Kdo jsme",
-    "description": "Filtrex s.r.o. je český výrobce průmyslových deskových filtrů a nanovlákenných filtračních membrán. Naše technologie zajišťuje vysokou čistotu filtrovaných tekutin v potravinářství, kosmetice i farmacii.",
-    "badge": "První v ČR s nanovláknem",
+    "description": "FILTREX s.r.o. od roku 1991 vyrábí deskové filtry. Tyto deskové filtry byly postupně upraveny tak, aby umožnily filtraci nanovlákennou membránou. Od roku 2017 nabízí svým zákazníkům jako filtrační materiál nanovlákennou membránu RIFTELEN N15. Filtraci nanovláknem používáme hlavně pro filtraci rostlinných olejů, ale postupně nachází uplatnění i v dalších oblastech jako je filtrace kávy nebo kosmetiky. Zákazníci si filtraci nanovláknem vybírají především proto, že umožňuje filtraci při nízkém tlaku, zachová senzorické vlastnosti a barvu filtrovaného produktu, filtrační materiál není nasákavý a je regenerovatelný. Filtrace nanovláknem je zajímavou alternativou tam, kde klasická filtrace nevyhovuje.",
+    "badge": "První filtrace v ČR s nanovláknem v potravinářství",
     "point1": "Filtrace rostlinných olejů",
     "point2": "Filtrace kávy a nápojů",
-    "point3": "Filtrace kosmetiky a farmacie",
-    "point4": "Nerezová ocel, hygienické provedení"
+    "point3": "Filtrace kosmetiky",
+    "point4": "Nerezové provedení deskového filtru – dlouhodobá životnost"
   },
   "products": {
     "title": "Naše produkty",
-    "subtitle": "Přesná filtrace pro náročné aplikace",
+    "subtitle": "Nanovlákno přináší efektivnější filtraci",
     "view_all": "Zobrazit všechny produkty",
     "add_to_cart": "Přidat do košíku",
     "buy": "Koupit",
@@ -34,7 +34,8 @@
     "inquiry_cta": "Poptávka na míru",
     "in_development": "Ve vývoji",
     "quantity": "Počet kusů",
-    "added_to_cart": "Přidáno do košíku"
+    "added_to_cart": "Přidáno do košíku",
+    "more": "Více informací"
   },
   "references": {
     "title": "Naši zákazníci",
@@ -89,7 +90,7 @@
     "quantity": "Množství"
   },
   "footer": {
-    "tagline": "Spolehlivé a výkonné filtry",
+    "tagline": "Deskové filtry s nanovláknem",
     "company": "Firma",
     "legal": "Právní informace",
     "privacy": "Ochrana osobních údajů",

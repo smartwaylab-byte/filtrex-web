@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+﻿import { useTranslations } from 'next-intl'
 
 const points = ['point1', 'point2', 'point3', 'point4'] as const
 
@@ -10,7 +10,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-medium mb-4">
+            <span className="inline-flex w-fit items-center px-4 py-1.5 rounded-full bg-brand-light text-brand-dark text-base font-medium mb-4">
               {t('badge')}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
@@ -22,8 +22,8 @@ export default function AboutSection() {
             <ul className="space-y-3">
               {points.map((key) => (
                 <li key={key} className="flex items-center gap-3 text-gray-700">
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
-                    <svg className="w-3 h-3 text-green-700" fill="currentColor" viewBox="0 0 20 20">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-brand-light flex items-center justify-center">
+                    <svg className="w-3 h-3 text-brand" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>
@@ -41,7 +41,7 @@ export default function AboutSection() {
                   { icon: '🫙', label: 'Rostlinné oleje' },
                   { icon: '☕', label: 'Káva & nápoje' },
                   { icon: '💄', label: 'Kosmetika' },
-                  { icon: '⚗️', label: 'Farmacie' },
+                  { icon: '⚙️', label: 'Nerezové provedení' },
                 ].map((item) => (
                   <div key={item.label} className="bg-white/10 rounded-xl p-4 text-center hover:bg-white/15 transition-colors">
                     <div className="text-3xl mb-2">{item.icon}</div>
@@ -50,7 +50,20 @@ export default function AboutSection() {
                 ))}
               </div>
               <div className="mt-6 pt-6 border-t border-white/20 text-center">
-                <p className="text-green-400 font-semibold text-sm">Technologie nanovlákna</p>
+                <a
+                  href="/osvedceni-deskovy-filtr.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-brand-yellow font-semibold text-sm hover:text-amber-400 transition-colors group"
+                >
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                  Technologie nanovlákna
+                  <svg className="w-3 h-3 opacity-60 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
                 <p className="text-gray-400 text-xs mt-1">Člen klastru NANOPROGRESS</p>
               </div>
             </div>

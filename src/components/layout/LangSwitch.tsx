@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useRef, useEffect } from 'react'
 import { useLocale } from 'next-intl'
@@ -33,7 +33,7 @@ export default function LangSwitch() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 px-2 py-1.5 text-sm font-medium text-gray-700 hover:text-green-700 rounded-md border border-gray-200 hover:border-green-300 transition-colors"
+        className="flex items-center gap-1 px-2 py-1.5 text-sm font-medium text-gray-700 hover:text-brand rounded-md border border-gray-200 hover:border-brand/40 transition-colors"
       >
         {labels[locale]}
         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,8 +46,8 @@ export default function LangSwitch() {
             <button
               key={l}
               onClick={() => switchLocale(l)}
-              className={`w-full text-center px-3 py-1.5 text-sm hover:bg-green-50 hover:text-green-700 transition-colors ${
-                l === locale ? 'font-bold text-green-700 bg-green-50' : 'text-gray-700'
+              className={`w-full text-center px-3 py-1.5 text-sm hover:bg-brand-light hover:text-brand transition-colors ${
+                l === locale ? 'font-bold text-brand bg-brand-light' : 'text-gray-700'
               }`}
             >
               {labels[l]}

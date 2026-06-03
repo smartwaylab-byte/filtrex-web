@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -37,19 +37,19 @@ export default function InquiryForm() {
     else setStatus('error')
   }
 
-  const inputClass = 'w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent text-gray-900 bg-white'
+  const inputClass = 'w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-gray-900 bg-white'
   const labelClass = 'block text-sm font-medium text-gray-700 mb-1.5'
   const errorClass = 'text-red-500 text-xs mt-1'
 
   if (status === 'success') {
     return (
       <div className="text-center py-8">
-        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <p className="text-green-700 font-semibold text-lg">{t('success')}</p>
+        <p className="text-brand font-semibold text-lg">{t('success')}</p>
       </div>
     )
   }
@@ -108,7 +108,7 @@ export default function InquiryForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full py-4 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors disabled:opacity-60"
+        className="w-full py-4 bg-brand-yellow text-gray-900 font-semibold rounded-xl hover:bg-amber-500 transition-colors disabled:opacity-60"
       >
         {status === 'sending' ? t('sending') : t('send')}
       </button>

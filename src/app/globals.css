@@ -10,13 +10,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Filtrex brand colors – z loga */
+  --color-brand: #D4701E;        /* oranžová – primární akční barva */
+  --color-brand-dark: #7B1A2A;   /* tmavá maroon – hover stavy */
+  --color-brand-light: #FEF3E8;  /* světlá – pozadí, tints */
+  --color-brand-yellow: #F5B200; /* zlatá/žlutá – pozadí tlačítek, bannery */
 }
 
 body {
