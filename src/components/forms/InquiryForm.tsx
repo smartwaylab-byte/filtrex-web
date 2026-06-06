@@ -149,15 +149,11 @@ export default function InquiryForm() {
           </div>
         </div>
         <div>
-          <label className={labelClass}>{t('product')}</label>
           <Link
             href={`${prefix}/produkty`}
-            className="flex items-center justify-between w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-500 hover:border-brand hover:text-brand transition-colors text-sm"
+            className="inline-flex items-center px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-colors"
           >
-            <span>{items.length > 0 ? `Vybráno: ${items.length} produkt${items.length > 1 ? 'y' : ''}` : 'Vybrat produkt z katalogu'}</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            Produkty
           </Link>
         </div>
         <div className="grid sm:grid-cols-2 gap-4">
