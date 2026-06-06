@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import LangSwitch from './LangSwitch'
+import { useCartStore } from '@/store/cart'
 // CartIcon skryt – produkty se přidávají přímo do poptávky (viz /kosik a store/cart)
 
 const locales = ['cs', 'en', 'de', 'es', 'it', 'pl'] as const
@@ -15,6 +16,7 @@ export default function Header() {
   const locale = useLocale()
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const totalItems = useCartStore((s) => s.totalItems())
 
   const prefix = locale === 'cs' ? '' : `/${locale}`
 
@@ -57,12 +59,19 @@ export default function Header() {
           {/* Right side */}
           <div className="flex items-center gap-3">
             <LangSwitch />
-            <Link
-              href={`${prefix}/poptavka`}
-              className="hidden sm:inline-flex items-center px-4 py-2 bg-brand-yellow text-gray-900 text-sm font-medium rounded-md hover:bg-amber-500 transition-colors"
-            >
-              {t('inquiry')}
-            </Link>
+            <div className="relative hidden sm:inline-block">
+              <Link
+                href={`${prefix}/poptavka`}
+                className="inline-flex items-center px-4 py-2 bg-brand-yellow text-gray-900 text-sm font-medium rounded-md hover:bg-amber-500 transition-colors"
+              >
+                {t('inquiry')}
+              </Link>
+              {totalItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-brand text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold border-2 border-white pointer-events-none">
+                  {totalItems}
+                </span>
+              )}
+            </div>
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
