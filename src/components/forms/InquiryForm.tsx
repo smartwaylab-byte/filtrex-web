@@ -148,13 +148,18 @@ export default function InquiryForm() {
             <input {...register('phone')} type="tel" className={inputClass} />
           </div>
         </div>
-        <div>
+        <div className="relative inline-block">
           <Link
             href={`${prefix}/produkty`}
             className="inline-flex items-center px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-colors"
           >
             Produkty
           </Link>
+          {items.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-brand text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold border-2 border-white">
+              {items.reduce((sum, i) => sum + i.quantity, 0)}
+            </span>
+          )}
         </div>
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
