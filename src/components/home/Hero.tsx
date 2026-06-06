@@ -1,4 +1,5 @@
-﻿import Link from 'next/link'
+﻿import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 
 export default function Hero() {
@@ -10,8 +11,8 @@ export default function Hero() {
     <>
       {/* Tmavá hero sekce – jen nadpis + tlačítka */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[linear-gradient(30deg,#D4701E_12%,transparent_12.5%,transparent_87%,#D4701E_87.5%,#D4701E),linear-gradient(150deg,#D4701E_12%,transparent_12.5%,transparent_87%,#D4701E_87.5%,#D4701E),linear-gradient(30deg,#D4701E_12%,transparent_12.5%,transparent_87%,#D4701E_87.5%,#D4701E),linear-gradient(150deg,#D4701E_12%,transparent_12.5%,transparent_87%,#D4701E_87.5%,#D4701E)] bg-[length:80px_140px]" />
+        <div className="absolute inset-0 opacity-20">
+          <Image src="/linka.png" alt="" fill className="object-cover" aria-hidden="true" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">

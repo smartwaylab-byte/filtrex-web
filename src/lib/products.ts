@@ -75,7 +75,7 @@ Dostupná ve variantě N15–5 (zádržnost 5 µm) a N15–12 (zádržnost 12 µ
     price: 0,
     currency: 'CZK',
     stripePriceId: '',
-    images: [],
+    images: ['/products/d11.png'],
     parameters: [],
     inDevelopment: true,
     category: 'filter',
