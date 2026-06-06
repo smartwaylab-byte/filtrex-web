@@ -6,7 +6,7 @@
     "news": "News",
     "contact": "Contact",
     "inquiry": "Inquiry",
-    "cart": "Cart"
+    "cart": "Quote"
   },
   "hero": {
     "headline": "Professional nano filtration for food industry",
@@ -27,14 +27,14 @@
     "title": "Our products",
     "subtitle": "Precise filtration for demanding applications",
     "view_all": "View all products",
-    "add_to_cart": "Add to cart",
+    "add_to_cart": "Add to Quote",
     "buy": "Buy",
     "price": "Price",
     "parameters": "Technical parameters",
     "inquiry_cta": "Custom inquiry",
     "in_development": "In development",
     "quantity": "Quantity",
-    "added_to_cart": "Added to cart",
+    "added_to_cart": "Added to Quote",
     "more": "More information"
   },
   "references": {
@@ -81,13 +81,18 @@
     "error": "Failed to send inquiry. Please try again."
   },
   "cart": {
-    "title": "Cart",
-    "empty": "Your cart is empty",
+    "title": "Your Quote",
+    "empty": "Your quote is empty",
     "total": "Total",
     "checkout": "Proceed to checkout",
-    "continue_shopping": "Continue shopping",
+    "continue_shopping": "Continue browsing",
     "remove": "Remove",
-    "quantity": "Quantity"
+    "quantity": "Quantity",
+    "send_inquiry": "Send Inquiry",
+    "sending": "Sending...",
+    "success": "Inquiry sent. We will get back to you within 2 business days.",
+    "error": "Failed to send inquiry. Please try again.",
+    "form_message": "Additional notes (optional)"
   },
   "footer": {
     "tagline": "Reliable and powerful filters",

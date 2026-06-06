@@ -6,7 +6,7 @@
     "news": "Aktuality",
     "contact": "Kontakt",
     "inquiry": "Poptávka",
-    "cart": "Košík"
+    "cart": "Nabídka"
   },
   "hero": {
     "headline": "Deskové filtry s nanovláknem",
@@ -27,14 +27,14 @@
     "title": "Naše produkty",
     "subtitle": "Nanovlákno přináší efektivnější filtraci",
     "view_all": "Zobrazit všechny produkty",
-    "add_to_cart": "Přidat do košíku",
+    "add_to_cart": "Přidat do nabídky",
     "buy": "Koupit",
     "price": "Cena",
     "parameters": "Technické parametry",
     "inquiry_cta": "Poptávka na míru",
     "in_development": "Ve vývoji",
     "quantity": "Počet kusů",
-    "added_to_cart": "Přidáno do košíku",
+    "added_to_cart": "Přidáno do nabídky",
     "more": "Více informací"
   },
   "references": {
@@ -81,13 +81,18 @@
     "error": "Nepodařilo se odeslat poptávku. Zkuste to prosím znovu."
   },
   "cart": {
-    "title": "Košík",
-    "empty": "Košík je prázdný",
+    "title": "Vaše nabídka",
+    "empty": "Nabídka je prázdná",
     "total": "Celkem",
     "checkout": "Přejít k platbě",
-    "continue_shopping": "Pokračovat v nákupu",
+    "continue_shopping": "Pokračovat v prohlížení",
     "remove": "Odebrat",
-    "quantity": "Množství"
+    "quantity": "Množství",
+    "send_inquiry": "Odeslat poptávku",
+    "sending": "Odesílám...",
+    "success": "Poptávka byla odeslána. Ozveme se vám do 2 pracovních dnů.",
+    "error": "Nepodařilo se odeslat poptávku. Zkuste to prosím znovu.",
+    "form_message": "Doplňující informace (volitelné)"
   },
   "footer": {
     "tagline": "Deskové filtry s nanovláknem",

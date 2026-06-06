@@ -26,14 +26,6 @@ export default function AddToCart({ product }: { product: Product }) {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-3">
-        <span className="text-2xl font-bold text-gray-900">
-          {product.price === 0
-            ? <span className="text-brand text-lg font-semibold">{t('inquiry_cta')}</span>
-            : `${product.price.toLocaleString('cs-CZ')} Kč`}
-        </span>
-      </div>
-
-      <div className="flex items-center gap-3">
         <span className="text-sm font-medium text-gray-700">{t('quantity')}:</span>
         <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
           <button

@@ -6,7 +6,7 @@
     "news": "Neuigkeiten",
     "contact": "Kontakt",
     "inquiry": "Anfrage",
-    "cart": "Warenkorb"
+    "cart": "Anfrage"
   },
   "hero": {
     "headline": "Professionelle Nanofiltration für die Lebensmittelindustrie",
@@ -27,14 +27,15 @@
     "title": "Unsere Produkte",
     "subtitle": "Präzise Filtration für anspruchsvolle Anwendungen",
     "view_all": "Alle Produkte ansehen",
-    "add_to_cart": "In den Warenkorb",
+    "add_to_cart": "Zur Anfrage hinzufügen",
     "buy": "Kaufen",
     "price": "Preis",
     "parameters": "Technische Parameter",
     "inquiry_cta": "Individuelle Anfrage",
     "in_development": "In Entwicklung",
     "quantity": "Stückzahl",
-    "added_to_cart": "In den Warenkorb gelegt"
+    "added_to_cart": "Zur Anfrage hinzugefügt",
+    "more": "Mehr Informationen"
   },
   "references": {
     "title": "Unsere Kunden",
@@ -80,13 +81,18 @@
     "error": "Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
   },
   "cart": {
-    "title": "Warenkorb",
-    "empty": "Ihr Warenkorb ist leer",
+    "title": "Ihre Anfrage",
+    "empty": "Anfrage ist leer",
     "total": "Gesamt",
     "checkout": "Zur Kasse",
-    "continue_shopping": "Weiter einkaufen",
+    "continue_shopping": "Weiter stöbern",
     "remove": "Entfernen",
-    "quantity": "Menge"
+    "quantity": "Menge",
+    "send_inquiry": "Anfrage senden",
+    "sending": "Wird gesendet...",
+    "success": "Anfrage gesendet. Wir melden uns innerhalb von 2 Werktagen.",
+    "error": "Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+    "form_message": "Zusätzliche Informationen (optional)"
   },
   "footer": {
     "tagline": "Zuverlässige und leistungsstarke Filter",
