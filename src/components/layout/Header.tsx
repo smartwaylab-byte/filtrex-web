@@ -5,8 +5,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
-import CartIcon from './CartIcon'
 import LangSwitch from './LangSwitch'
+// CartIcon skryt – produkty se přidávají přímo do poptávky (viz /kosik a store/cart)
 
 const locales = ['cs', 'en', 'de', 'es', 'it', 'pl'] as const
 
@@ -57,7 +57,6 @@ export default function Header() {
           {/* Right side */}
           <div className="flex items-center gap-3">
             <LangSwitch />
-            <CartIcon />
             <Link
               href={`${prefix}/poptavka`}
               className="hidden sm:inline-flex items-center px-4 py-2 bg-brand-yellow text-gray-900 text-sm font-medium rounded-md hover:bg-amber-500 transition-colors"
