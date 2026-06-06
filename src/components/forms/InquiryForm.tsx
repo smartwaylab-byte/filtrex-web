@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import { useTranslations, useLocale } from 'next-intl'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -13,7 +14,6 @@ const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   phone: z.string().optional(),
-  product: z.string().optional(),
   volume: z.string().optional(),
   liquid: z.string().optional(),
   message: z.string().min(0),
@@ -22,6 +22,8 @@ type FormData = z.infer<typeof schema>
 
 export default function InquiryForm() {
   const t = useTranslations('inquiry')
+  const locale = useLocale()
+  const prefix = locale === 'cs' ? '' : `/${locale}`
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const { items, removeItem, updateQuantity, clearCart } = useCartStore()
 
@@ -148,13 +150,15 @@ export default function InquiryForm() {
         </div>
         <div>
           <label className={labelClass}>{t('product')}</label>
-          <select {...register('product')} className={inputClass}>
-            <option value="">– vyberte –</option>
-            <option value="FILTREX D18 20/20">FILTREX D18 20/20</option>
-            <option value="RIFTELEN N15">RIFTELEN N15 (membrána)</option>
-            <option value="FILTREX D11 40/40">FILTREX D11 40/40 (ve vývoji)</option>
-            <option value="Jiné">Jiné / nevím</option>
-          </select>
+          <Link
+            href={`${prefix}/produkty`}
+            className="flex items-center justify-between w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-500 hover:border-brand hover:text-brand transition-colors text-sm"
+          >
+            <span>{items.length > 0 ? `Vybráno: ${items.length} produkt${items.length > 1 ? 'y' : ''}` : 'Vybrat produkt z katalogu'}</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
