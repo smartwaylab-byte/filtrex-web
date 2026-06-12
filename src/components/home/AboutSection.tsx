@@ -4,21 +4,37 @@ const points = ['point1', 'point2', 'point3', 'point4'] as const
 
 export default function AboutSection() {
   const t = useTranslations('about')
+  const paragraphs = t('description').split('\n\n')
+  const firstPara = paragraphs[0]
+  const restParas = paragraphs.slice(1)
 
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+
+        {/* Centered badge + heading */}
+        <div className="text-center mb-6">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-brand-light text-brand-dark text-base font-medium mb-4">
+            {t('badge')}
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            {t('title')}
+          </h2>
+        </div>
+
+        {/* First paragraph – full width */}
+        <p className="text-lg text-gray-600 leading-relaxed mb-10">
+          {firstPara}
+        </p>
+
+        {/* Two-column: remaining text + bullets | visual panel */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <span className="inline-flex w-fit items-center px-4 py-1.5 rounded-full bg-brand-light text-brand-dark text-base font-medium mb-4">
-              {t('badge')}
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              {t('title')}
-            </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              {t('description')}
-            </p>
+            <div className="text-lg text-gray-600 leading-relaxed space-y-4 mb-8">
+              {restParas.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
             <ul className="space-y-3">
               {points.map((key) => (
                 <li key={key} className="flex items-center gap-3 text-gray-700">
@@ -69,6 +85,7 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

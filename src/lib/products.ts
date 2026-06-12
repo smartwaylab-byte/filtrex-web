@@ -19,9 +19,11 @@ export const products: Product[] = [
     slug: 'filtrex-d18-2020',
     name: 'FILTREX D18 20/20',
     shortDescription: 'Deskový filtr pro filtraci rostlinných olejů a kosmetiky z nerezové oceli.',
-    description: `Deskový filtr FILTREX D18 20/20 je průmyslový filtr z nerezové oceli určený pro filtraci rostlinných olejů, kosmetiky a dalších potravinářských tekutin. Využívá nanovlákennou filtrační membránu RIFTELEN N15 pro dosažení vysoké čistoty filtrovaného produktu.
+    description: `Deskový filtr FILTREX D18 20/20 je průmyslový filtr určený pro filtraci rostlinných olejů, kosmetiky a dalších potravinářských kapalin. Využívá nanovlákennou filtrační membránu RIFTELEN N15 pro dosažení vysoké čistoty filtrovaného produktu.
 
-Variabilní počet desek umožňuje přizpůsobit filtrační plochu konkrétním potřebám výroby. Hygienické provedení z nerezové oceli splňuje požadavky potravinářského průmyslu.`,
+Variabilní počet desek umožňuje přizpůsobit filtrační plochu konkrétním potřebám výroby.
+
+Hygienické provedení z nerezové oceli splňuje nejnáročnější požadavky potravinářského průmyslu.`,
     price: 0,
     currency: 'CZK',
     stripePriceId: 'price_DOPLNIT',
