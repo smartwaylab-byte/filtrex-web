@@ -69,6 +69,7 @@ export default function Footer() {
           <div className="flex gap-4">
             <Link href={`${prefix}/ochrana-osobnich-udaju`} className="hover:text-gray-300 transition-colors">{t('privacy')}</Link>
             <Link href={`${prefix}/obchodni-podminky`} className="hover:text-gray-300 transition-colors">{t('terms')}</Link>
+            <Link href={`${prefix}/copyright`} className="hover:text-gray-300 transition-colors">Copyright</Link>
           </div>
         </div>
       </div>

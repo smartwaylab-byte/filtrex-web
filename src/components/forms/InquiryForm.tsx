@@ -180,6 +180,12 @@ export default function InquiryForm() {
         >
           {status === 'sending' ? t('sending') : t('send')}
         </button>
+        <p className="text-xs text-gray-500 text-center">
+          Odesláním souhlasíte se zpracováním osobních údajů dle{' '}
+          <Link href={`${prefix}/ochrana-osobnich-udaju`} className="text-brand hover:text-brand-dark underline">
+            Zásad ochrany osobních údajů
+          </Link>.
+        </p>
       </form>
     </div>
   )
