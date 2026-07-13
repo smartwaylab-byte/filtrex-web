@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { getTranslations, getLocale } from 'next-intl/server'
 import { getPostBySlug, getPosts } from '@/lib/sanity/queries'
 import { urlFor } from '@/lib/sanity/client'
+import { getVideoEmbedUrl } from '@/lib/video'
 import PortableTextBody from '@/components/blog/PortableTextBody'
 
 export const revalidate = 60
@@ -25,6 +26,7 @@ export default async function PostDetailPage({ params }: { params: Promise<{ slu
   const t = await getTranslations('news')
   const locale = await getLocale()
   const prefix = locale === 'cs' ? '' : `/${locale}`
+  const videoEmbedUrl = post.videoUrl ? getVideoEmbedUrl(post.videoUrl) : null
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -56,6 +58,18 @@ export default async function PostDetailPage({ params }: { params: Promise<{ slu
             alt={post.title}
             fill
             className="object-cover"
+          />
+        </div>
+      )}
+
+      {videoEmbedUrl && (
+        <div className="aspect-[16/9] relative rounded-2xl overflow-hidden mb-10 bg-gray-100">
+          <iframe
+            src={videoEmbedUrl}
+            title={post.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
           />
         </div>
       )}

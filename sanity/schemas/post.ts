@@ -11,6 +11,12 @@ export const postSchema = defineType({
     defineField({ name: 'excerpt', title: 'Krátký popis', type: 'text', rows: 3 }),
     defineField({ name: 'mainImage', title: 'Hlavní obrázek', type: 'image', options: { hotspot: true } }),
     defineField({
+      name: 'videoUrl',
+      title: 'Video',
+      type: 'url',
+      description: 'Odkaz na YouTube video (nepovinné)',
+    }),
+    defineField({
       name: 'body',
       title: 'Obsah',
       type: 'array',

@@ -7,13 +7,14 @@ export type Post = {
   excerpt: string
   body: unknown[]
   mainImage?: { asset: { _ref: string } }
+  videoUrl?: string
   publishedAt: string
 }
 
 export async function getPosts(): Promise<Post[]> {
   return sanityClient.fetch(
     `*[_type == "post"] | order(publishedAt desc) {
-      _id, title, slug, excerpt, mainImage, publishedAt
+      _id, title, slug, excerpt, mainImage, videoUrl, publishedAt
     }`
   )
 }
@@ -21,7 +22,7 @@ export async function getPosts(): Promise<Post[]> {
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   return sanityClient.fetch(
     `*[_type == "post" && slug.current == $slug][0] {
-      _id, title, slug, excerpt, body, mainImage, publishedAt
+      _id, title, slug, excerpt, body, mainImage, videoUrl, publishedAt
     }`,
     { slug }
   )
