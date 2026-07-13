@@ -7,7 +7,10 @@ import { routing } from '@/i18n/routing'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import '../globals.css'
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'] })
 
@@ -53,6 +56,9 @@ export default async function LocaleLayout({
           <Footer />
         </NextIntlClientProvider>
         <Analytics />
+        {gaMeasurementId && gaMeasurementId !== 'DOPLNIT' && (
+          <GoogleAnalytics gaId={gaMeasurementId} />
+        )}
       </body>
     </html>
   )

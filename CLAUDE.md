@@ -78,7 +78,8 @@
 - [ ] Sanity schéma – spustit `npx sanity init` pro blog
 - [ ] Vlastní doména – napojit na Vercel
 - [ ] OG image – doplnit pro sdílení na sociálních sítích
-- [ ] Analytics – zvážit Vercel Analytics nebo Google Analytics
+- [x] Analytics – Vercel Analytics (nasazeno) + Google Analytics 4 (`@next/third-parties`, `GoogleAnalytics` komponenta v `src/app/[locale]/layout.tsx`, ID v `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
+- [ ] GA4 – založit property na analytics.google.com, doplnit `NEXT_PUBLIC_GA_MEASUREMENT_ID`, nasdílet přístup klientovi (mimo kód, ručně přes Google účet klienta)
 
 ## Poznámky pro vývoj
 
@@ -91,6 +92,7 @@ CONTACT_EMAIL=kopecny@filtrex.cz
 NEXT_PUBLIC_SANITY_PROJECT_ID=...
 NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_BASE_URL=https://filtrex.cz
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-...
 ```
 
 ### Nasazení
