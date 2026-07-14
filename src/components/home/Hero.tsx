@@ -11,9 +11,10 @@ export default function Hero() {
     <>
       {/* Tmavá hero sekce – jen nadpis + tlačítka */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <Image src="/linka.png" alt="" fill className="object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 opacity-70">
+          <Image src="/linka-v2.png" alt="" fill className="object-cover" aria-hidden="true" />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/60 to-gray-900/20" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl">
