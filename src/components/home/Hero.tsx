@@ -60,8 +60,8 @@ export default function Hero() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-2 border-t border-gray-100">
             {[
               { value: '30+', label: 'let zkušeností' },
-              { value: '12', label: 'zákazníků ve světě' },
-              { value: '5', label: 'zemí' },
+              { value: '34', label: 'zákazníků ve světě' },
+              { value: '7', label: 'zemí' },
               { value: '#1', label: 'nanovlákno v ČR' },
             ].map((stat) => (
               <div key={stat.label} className="border-l-2 border-brand pl-4">
