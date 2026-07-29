@@ -154,11 +154,15 @@ export default function OchranaOsobnichUdajuPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-3">7. Soubory cookies</h2>
-          <div className="bg-brand-light border border-brand/20 rounded-xl p-5">
+          <div className="bg-brand-light border border-brand/20 rounded-xl p-5 space-y-3">
             <p>
-              Tento web používá pouze technicky nezbytné cookies zajišťované platformou Vercel. Tyto cookies nevyžadují
-              váš souhlas a nelze je vypnout, protože jsou nezbytné pro správné fungování stránek. Web nepoužívá
-              analytické ani marketingové cookies.
+              Web používá technicky nezbytné cookies zajišťované platformou Vercel. Tyto cookies nevyžadují váš souhlas
+              a nelze je vypnout, protože jsou nezbytné pro správné fungování stránek.
+            </p>
+            <p>
+              Dále web může používat analytické cookies služby Google Analytics 4, které měří návštěvnost a chování
+              uživatelů na webu. Tyto cookies se načtou pouze po vašem souhlasu, který udělíte prostřednictvím lišty
+              zobrazené při první návštěvě webu. Souhlas můžete kdykoli odvolat vymazáním dat webu ve svém prohlížeči.
             </p>
           </div>
         </section>

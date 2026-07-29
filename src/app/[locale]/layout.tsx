@@ -7,9 +7,9 @@ import { routing } from '@/i18n/routing'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Analytics } from '@vercel/analytics/next'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import { baseUrl, ogLocale, buildAlternates, organizationSchema } from '@/lib/seo'
 import JsonLd from '@/components/seo/JsonLd'
+import CookieConsent from '@/components/cookies/CookieConsent'
 import '../globals.css'
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
@@ -68,11 +68,9 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <CookieConsent gaId={gaMeasurementId && gaMeasurementId !== 'DOPLNIT' ? gaMeasurementId : undefined} />
         </NextIntlClientProvider>
         <Analytics />
-        {gaMeasurementId && gaMeasurementId !== 'DOPLNIT' && (
-          <GoogleAnalytics gaId={gaMeasurementId} />
-        )}
       </body>
     </html>
   )
