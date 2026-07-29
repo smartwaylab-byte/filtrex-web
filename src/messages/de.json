@@ -35,11 +35,12 @@
     "in_development": "In Entwicklung",
     "quantity": "Stückzahl",
     "added_to_cart": "Zur Anfrage hinzugefügt",
-    "more": "Mehr Informationen"
+    "more": "Mehr Informationen",
+    "back_to_inquiry": "Zurück zur Anfrage"
   },
   "references": {
     "title": "Unsere Kunden",
-    "subtitle": "Unsere Filtration wird von Herstellern in 5 Ländern verwendet",
+    "subtitle": "Unsere Filtration wird von Herstellern in 7 Ländern verwendet",
     "view_all": "Alle Referenzen"
   },
   "news": {
@@ -47,7 +48,8 @@
     "subtitle": "Updates aus Entwicklung und Praxis",
     "read_more": "Weiterlesen",
     "back": "Zurück zu Neuigkeiten",
-    "no_posts": "Noch keine Beiträge."
+    "no_posts": "Noch keine Beiträge.",
+    "load_more": "Mehr anzeigen"
   },
   "contact": {
     "title": "Kontaktieren Sie uns",

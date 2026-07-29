@@ -35,11 +35,12 @@
     "in_development": "In development",
     "quantity": "Quantity",
     "added_to_cart": "Added to Inquiry",
-    "more": "More information"
+    "more": "More information",
+    "back_to_inquiry": "Back to inquiry"
   },
   "references": {
     "title": "Our customers",
-    "subtitle": "Our filtration is used by manufacturers in 5 countries",
+    "subtitle": "Our filtration is used by manufacturers in 7 countries",
     "view_all": "All references"
   },
   "news": {
@@ -47,7 +48,8 @@
     "subtitle": "Updates from development and practice",
     "read_more": "Read more",
     "back": "Back to news",
-    "no_posts": "No posts yet."
+    "no_posts": "No posts yet.",
+    "load_more": "Load more"
   },
   "contact": {
     "title": "Contact us",

@@ -35,11 +35,12 @@
     "in_development": "Ve vývoji",
     "quantity": "Počet kusů",
     "added_to_cart": "Přidáno do poptávky",
-    "more": "Více informací"
+    "more": "Více informací",
+    "back_to_inquiry": "Zpět na poptávku"
   },
   "references": {
     "title": "Naši zákazníci",
-    "subtitle": "Naše produkty používají výrobci v 5 zemích světa",
+    "subtitle": "Naše produkty používají výrobci v 7 zemích světa",
     "view_all": "Všechny reference"
   },
   "news": {
@@ -47,7 +48,8 @@
     "subtitle": "Novinky z vývoje a praxe",
     "read_more": "Číst dále",
     "back": "Zpět na aktuality",
-    "no_posts": "Zatím žádné příspěvky."
+    "no_posts": "Zatím žádné příspěvky.",
+    "load_more": "Zobrazit další"
   },
   "contact": {
     "title": "Kontaktujte nás",
