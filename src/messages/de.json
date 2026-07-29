@@ -12,7 +12,11 @@
     "headline": "Professionelle Nanofiltration für die Lebensmittelindustrie",
     "subheadline": "Wir filtern pflanzliche Öle, Kaffee und Kosmetika. Erster Hersteller in Tschechien mit Nanofasern für die Filtration.",
     "cta_primary": "Produkte ansehen",
-    "cta_secondary": "Angebot anfragen"
+    "cta_secondary": "Angebot anfragen",
+    "stat_experience": "Jahre Erfahrung",
+    "stat_customers": "Kunden weltweit",
+    "stat_countries": "Länder",
+    "stat_nano": "Nanofaser in Tschechien"
   },
   "about": {
     "title": "Wer wir sind",
@@ -109,5 +113,11 @@
     "error": "Ein Fehler ist aufgetreten",
     "back": "Zurück",
     "more": "Mehr Informationen"
+  },
+  "cookies": {
+    "message": "Diese Website verwendet Cookies zur Analyse des Besucherverkehrs (Google Analytics). Technisch notwendige Cookies sind immer aktiv.",
+    "accept": "Akzeptieren",
+    "reject": "Nur notwendige",
+    "learn_more": "Mehr erfahren"
   }
 }

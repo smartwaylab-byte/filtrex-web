@@ -12,7 +12,11 @@
     "headline": "Professional nano filtration for food industry",
     "subheadline": "We filter vegetable oils, coffee and cosmetics. First manufacturer in the Czech Republic using nanofibers for filtration.",
     "cta_primary": "View products",
-    "cta_secondary": "Request a quote"
+    "cta_secondary": "Request a quote",
+    "stat_experience": "years of experience",
+    "stat_customers": "customers worldwide",
+    "stat_countries": "countries",
+    "stat_nano": "nanofiber in Czechia"
   },
   "about": {
     "title": "Who we are",
@@ -109,5 +113,11 @@
     "error": "An error occurred",
     "back": "Back",
     "more": "More information"
+  },
+  "cookies": {
+    "message": "This website uses cookies for traffic analytics (Google Analytics). Technically necessary cookies are always active.",
+    "accept": "Accept",
+    "reject": "Necessary only",
+    "learn_more": "Learn more"
   }
 }

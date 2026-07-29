@@ -12,7 +12,11 @@
     "headline": "Deskové filtry s nanovláknem",
     "subheadline": "Filtrujeme rostlinné oleje, kávu, nápoje a kosmetiku. Jsme první výrobce v ČR, který používá nanovlákno pro filtraci v potravinářství.",
     "cta_primary": "Prohlédnout produkty",
-    "cta_secondary": "Nezávazná poptávka"
+    "cta_secondary": "Nezávazná poptávka",
+    "stat_experience": "let zkušeností",
+    "stat_customers": "zákazníků ve světě",
+    "stat_countries": "zemí",
+    "stat_nano": "nanovlákno v ČR"
   },
   "about": {
     "title": "Kdo jsme",
@@ -109,5 +113,11 @@
     "error": "Nastala chyba",
     "back": "Zpět",
     "more": "Více informací"
+  },
+  "cookies": {
+    "message": "Tento web používá cookies pro měření návštěvnosti (Google Analytics). Technicky nezbytné cookies jsou aktivní vždy.",
+    "accept": "Přijmout",
+    "reject": "Pouze nezbytné",
+    "learn_more": "Více informací"
   }
 }

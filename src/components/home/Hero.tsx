@@ -59,10 +59,10 @@ export default function Hero() {
           {/* Statistiky */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-2 border-t border-gray-100">
             {[
-              { value: '30+', label: 'let zkušeností' },
-              { value: '34', label: 'zákazníků ve světě' },
-              { value: '7', label: 'zemí' },
-              { value: '#1', label: 'nanovlákno v ČR' },
+              { value: '30+', label: t('stat_experience') },
+              { value: '34', label: t('stat_customers') },
+              { value: '7', label: t('stat_countries') },
+              { value: '#1', label: t('stat_nano') },
             ].map((stat) => (
               <div key={stat.label} className="border-l-2 border-brand pl-4">
                 <div className="text-3xl font-bold text-brand">{stat.value}</div>
