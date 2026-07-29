@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   const { name, email, phone, message } = parsed.data
 
   const resend = getResend()
-  await resend.emails.send({
+  const { error } = await resend.emails.send({
     from: 'web@filtrex.cz',
     to: CONTACT_EMAIL,
     replyTo: email,
@@ -32,6 +32,11 @@ export async function POST(req: NextRequest) {
       <p>${message.replace(/\n/g, '<br/>')}</p>
     `,
   })
+
+  if (error) {
+    console.error('Resend error (kontakt):', error)
+    return NextResponse.json({ error: 'Failed to send' }, { status: 502 })
+  }
 
   return NextResponse.json({ ok: true })
 }

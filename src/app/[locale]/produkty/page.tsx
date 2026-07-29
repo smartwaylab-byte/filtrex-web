@@ -1,7 +1,24 @@
 ﻿import { useTranslations, useLocale } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
 import Image from 'next/image'
+import type { Metadata } from 'next'
 import { products } from '@/lib/products'
+import { buildAlternates } from '@/lib/seo'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'products' })
+  return {
+    title: t('title'),
+    description: t('subtitle'),
+    alternates: buildAlternates(locale, '/produkty'),
+  }
+}
 
 export default function ProductsPage() {
   const t = useTranslations('products')
@@ -11,6 +28,15 @@ export default function ProductsPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-12">
+        <Link
+          href={`${prefix}/poptavka`}
+          className="inline-flex items-center gap-1 text-brand hover:text-brand-dark text-sm font-semibold mb-6"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          {t('back_to_inquiry')}
+        </Link>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
         <p className="text-lg text-gray-600">{t('subtitle')}</p>
       </div>

@@ -76,8 +76,14 @@
 
 ### Technické
 - [ ] Sanity schéma – spustit `npx sanity init` pro blog
-- [ ] Vlastní doména – napojit na Vercel
-- [ ] OG image – doplnit pro sdílení na sociálních sítích
+- [ ] Vlastní doména – napojit na Vercel (registrátor domény filtrex.cz: **Activ24**, cílový email pro poptávky: **info@filtrex.cz**)
+- [x] robots.txt – `src/app/robots.ts`, blokuje `/studio`, `/api`, `/kosik`, odkazuje na sitemap
+- [x] sitemap.xml – `src/app/sitemap.ts`, generuje všechny statické stránky + produkty + blog posty × 6 jazyků
+- [x] OG image – dynamický přes `src/app/[locale]/opengraph-image.tsx` (next/og ImageResponse, brand barvy, per-locale headline)
+- [x] Canonical URL a hreflang – `src/lib/seo.ts` (`buildAlternates`), zapojeno do všech hlavních stránek
+- [x] Per-page metadata (title/description) – homepage dědí z layoutu (stejný text), ostatní (produkty, produkty/[slug], aktuality, aktuality/[slug], reference, kontakt, poptavka) mají vlastní `generateMetadata`
+- [x] Strukturovaná data (JSON-LD) – Organization (site-wide v layoutu), Product (detail produktu), BlogPosting (detail aktuality) – `src/components/seo/JsonLd.tsx` + `src/lib/seo.ts`
+- [x] `llms.txt` – `public/llms.txt`, stručný přehled firmy a hlavních sekcí webu (jen česká verze)
 - [x] Analytics – Vercel Analytics (nasazeno) + Google Analytics 4 (`@next/third-parties`, `GoogleAnalytics` komponenta v `src/app/[locale]/layout.tsx`, ID v `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
 - [ ] GA4 – založit property na analytics.google.com, doplnit `NEXT_PUBLIC_GA_MEASUREMENT_ID`, nasdílet přístup klientovi (mimo kód, ručně přes Google účet klienta)
 
@@ -88,7 +94,7 @@
 STRIPE_SECRET_KEY=sk_live_...
 STRIPE_WEBHOOK_SECRET=whsec_...
 RESEND_API_KEY=re_...
-CONTACT_EMAIL=kopecny@filtrex.cz
+CONTACT_EMAIL=info@filtrex.cz
 NEXT_PUBLIC_SANITY_PROJECT_ID=...
 NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_BASE_URL=https://filtrex.cz

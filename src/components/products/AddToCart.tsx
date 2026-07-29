@@ -1,12 +1,15 @@
 ﻿'use client'
 
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import { useTranslations, useLocale } from 'next-intl'
 import { useCartStore } from '@/store/cart'
 import type { Product } from '@/lib/products'
 
 export default function AddToCart({ product }: { product: Product }) {
   const t = useTranslations('products')
+  const locale = useLocale()
+  const prefix = locale === 'cs' ? '' : `/${locale}`
   const addItem = useCartStore((s) => s.addItem)
   const [qty, setQty] = useState(1)
   const [added, setAdded] = useState(false)
@@ -54,6 +57,16 @@ export default function AddToCart({ product }: { product: Product }) {
       >
         {added ? t('added_to_cart') : t('add_to_cart')}
       </button>
+
+      <Link
+        href={`${prefix}/poptavka`}
+        className="inline-flex items-center gap-1 text-brand hover:text-brand-dark text-sm font-semibold"
+      >
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+        {t('back_to_inquiry')}
+      </Link>
     </div>
   )
 }

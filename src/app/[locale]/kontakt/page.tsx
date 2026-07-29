@@ -1,5 +1,22 @@
 ﻿import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 import ContactForm from '@/components/forms/ContactForm'
+import { buildAlternates } from '@/lib/seo'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'contact' })
+  return {
+    title: t('title'),
+    description: t('subtitle'),
+    alternates: buildAlternates(locale, '/kontakt'),
+  }
+}
 
 export default function KontaktPage() {
   const t = useTranslations('contact')

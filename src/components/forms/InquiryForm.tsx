@@ -77,6 +77,13 @@ export default function InquiryForm() {
 
   return (
     <div className="space-y-6">
+      <Link
+        href={`${prefix}/produkty`}
+        className="inline-flex items-center px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-colors"
+      >
+        Produkty
+      </Link>
+
       {/* Vybrané produkty */}
       {items.length > 0 && (
         <div className="space-y-3">
@@ -127,6 +134,17 @@ export default function InquiryForm() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
+            <label className={labelClass}>{t('volume')}</label>
+            <input {...register('volume')} placeholder="např. 50 l/h" className={inputClass} />
+          </div>
+          <div>
+            <label className={labelClass}>{t('liquid')}</label>
+            <input {...register('liquid')} placeholder="např. slunečnicový olej" className={inputClass} />
+          </div>
+        </div>
+        <hr className="border-gray-200" />
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div>
             <label className={labelClass}>{t('company')} *</label>
             <input {...register('company')} className={inputClass} />
             {errors.company && <p className={errorClass}>Vyplňte název firmy</p>}
@@ -146,24 +164,6 @@ export default function InquiryForm() {
           <div>
             <label className={labelClass}>{t('phone')}</label>
             <input {...register('phone')} type="tel" className={inputClass} />
-          </div>
-        </div>
-        <div>
-          <Link
-            href={`${prefix}/produkty`}
-            className="inline-flex items-center px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-colors"
-          >
-            Produkty
-          </Link>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label className={labelClass}>{t('volume')}</label>
-            <input {...register('volume')} placeholder="např. 50 l/h" className={inputClass} />
-          </div>
-          <div>
-            <label className={labelClass}>{t('liquid')}</label>
-            <input {...register('liquid')} placeholder="např. slunečnicový olej" className={inputClass} />
           </div>
         </div>
         <div>

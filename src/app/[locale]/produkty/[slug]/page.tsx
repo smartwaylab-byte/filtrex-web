@@ -4,16 +4,26 @@ import { getTranslations } from 'next-intl/server'
 import { getProductBySlug, products } from '@/lib/products'
 import AddToCart from '@/components/products/AddToCart'
 import type { Metadata } from 'next'
+import { baseUrl, buildAlternates } from '@/lib/seo'
+import JsonLd from '@/components/seo/JsonLd'
 
 export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>
+}): Promise<Metadata> {
+  const { locale, slug } = await params
   const product = getProductBySlug(slug)
   if (!product) return {}
-  return { title: product.name, description: product.shortDescription }
+  return {
+    title: product.name,
+    description: product.shortDescription,
+    alternates: buildAlternates(locale, `/produkty/${slug}`),
+  }
 }
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -23,8 +33,19 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   const t = await getTranslations('products')
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.shortDescription,
+    image: product.images.map((img) => `${baseUrl}${img}`),
+    sku: product.id,
+    brand: { '@type': 'Brand', name: 'Filtrex' },
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <JsonLd data={productSchema} />
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Images */}
         <div className="space-y-4">
