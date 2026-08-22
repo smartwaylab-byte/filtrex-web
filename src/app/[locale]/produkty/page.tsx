@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
-import { products } from '@/lib/products'
+import { localizeProducts } from '@/lib/products'
 import { buildAlternates } from '@/lib/seo'
 
 export async function generateMetadata({
@@ -22,8 +22,10 @@ export async function generateMetadata({
 
 export default function ProductsPage() {
   const t = useTranslations('products')
+  const tc = useTranslations('productContent')
   const locale = useLocale()
   const prefix = locale === 'cs' ? '' : `/${locale}`
+  const products = localizeProducts(tc)
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

@@ -1,12 +1,14 @@
 ﻿import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
-import { products } from '@/lib/products'
+import { localizeProducts } from '@/lib/products'
 
 export default function ProductsPreview() {
   const t = useTranslations('products')
+  const tc = useTranslations('productContent')
   const locale = useLocale()
   const prefix = locale === 'cs' ? '' : `/${locale}`
+  const products = localizeProducts(tc)
 
   return (
     <section className="py-20 bg-white">

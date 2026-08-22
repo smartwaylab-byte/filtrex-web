@@ -4,9 +4,9 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { useCartStore } from '@/store/cart'
-import type { Product } from '@/lib/products'
+import type { LocalizedProduct } from '@/lib/products'
 
-export default function AddToCart({ product }: { product: Product }) {
+export default function AddToCart({ product }: { product: LocalizedProduct }) {
   const t = useTranslations('products')
   const locale = useLocale()
   const prefix = locale === 'cs' ? '' : `/${locale}`

@@ -9,8 +9,8 @@
     "cart": "Nabídka"
   },
   "hero": {
-    "headline": "Deskové filtry s nanovláknem",
-    "subheadline": "Filtrujeme rostlinné oleje, kávu, nápoje a kosmetiku. Jsme první výrobce v ČR, který používá nanovlákno pro filtraci v potravinářství.",
+    "headline": "Nanovláknový filtr FILTREX pro potravinářství",
+    "subheadline": "Náš nanovláknový filtr (nanofiltr) šetrně filtruje rostlinné oleje, kávu, nápoje a kosmetiku. Jsme první výrobce v ČR, který používá nanovlákno pro filtraci v potravinářství.",
     "cta_primary": "Prohlédnout produkty",
     "cta_secondary": "Nezávazná poptávka",
     "stat_experience": "let zkušeností",
@@ -20,7 +20,7 @@
   },
   "about": {
     "title": "Kdo jsme",
-    "description": "Firma FILTREX s.r.o. se v roce 1991 transformovala z výrobního družstva DÍLO Svratouch a zaměřila se na vývoj a výrobu deskových filtrů s tkanou filtrační plachetkou nebo celulózovou deskou především pro potravinářství.\n\nSnaha zlepšit parametry našich zařízení nás vedla k hledání možností využít nové technologie výroby netkaných textilií s nanovlákenou membránou.\n\nJiž od roku 2017 nabízíme svým zákazníkům jako filtrační materiál námi vyvinutou nanovlákennou membránu RIFTELEN N15. Tato membrána se osvědčila hlavně při filtraci rostlinných olejů, postupně však nachází uplatnění i v dalších oblastech jako je filtrace kávy, nápojů nebo kosmetiky. Zákazníci si toto řešení vybírají především proto, že umožňuje provoz při nízkém tlaku, zachová senzorické vlastnosti a barvu filtrovaného produktu. Filtrační materiál není nasákavý a lze jej regenerovat.\n\nFiltrace nanovláknem je zajímavou alternativou tam, kde klasická filtrace nevyhovuje.",
+    "description": "Firma FILTREX s.r.o. se v roce 1991 transformovala z výrobního družstva DÍLO Svratouch a zaměřila se na vývoj a výrobu deskových filtrů s tkanou filtrační plachetkou nebo celulózovou deskou především pro potravinářství.\n\nSnaha zlepšit parametry našich zařízení nás vedla k hledání možností využít nové technologie výroby netkaných textilií s nanovlákenou membránou – tedy nanovláknový filtr (nanofiltr).\n\nJiž od roku 2017 nabízíme svým zákazníkům jako filtrační materiál námi vyvinutou nanovlákennou membránu RIFTELEN N15. Tato membrána se osvědčila hlavně při filtraci rostlinných olejů, postupně však nachází uplatnění i v dalších oblastech jako je filtrace kávy, nápojů nebo kosmetiky. Zákazníci si toto řešení vybírají především proto, že umožňuje provoz při nízkém tlaku, zachová senzorické vlastnosti a barvu filtrovaného produktu. Filtrační materiál není nasákavý a lze jej regenerovat.\n\nFiltrace nanovláknem je zajímavou alternativou tam, kde klasická filtrace nevyhovuje.",
     "badge": "První filtrace v ČR s nanovláknem v potravinářství",
     "point1": "Filtrace rostlinných olejů",
     "point2": "Filtrace kávy a nápojů",
@@ -29,7 +29,7 @@
   },
   "products": {
     "title": "Naše produkty",
-    "subtitle": "Nanovlákno přináší efektivnější filtraci",
+    "subtitle": "Nanovláknový filtr přináší efektivnější filtraci",
     "view_all": "Zobrazit všechny produkty",
     "add_to_cart": "Přidat do poptávky",
     "buy": "Koupit",
@@ -41,6 +41,41 @@
     "added_to_cart": "Přidáno do poptávky",
     "more": "Více informací",
     "back_to_inquiry": "Zpět na poptávku"
+  },
+  "productContent": {
+    "filtrex-d18-2020": {
+      "name": "FILTREX D18 20/20",
+      "shortDescription": "Deskový nanovláknový filtr pro filtraci rostlinných olejů a kosmetiky z nerezové oceli.",
+      "description": "Deskový filtr FILTREX D18 20/20 je průmyslový nanovláknový filtr (nanofiltr) určený pro filtraci rostlinných olejů, kosmetiky a dalších potravinářských kapalin. Využívá nanovlákennou filtrační membránu RIFTELEN N15 pro dosažení vysoké čistoty filtrovaného produktu.\n\nVariabilní počet desek umožňuje přizpůsobit filtrační plochu konkrétním potřebám výroby.\n\nHygienické provedení z nerezové oceli splňuje nejnáročnější požadavky potravinářského průmyslu.",
+      "parameters": [
+        { "label": "Počet nerezových desek", "value": "variabilní 6 až 20" },
+        { "label": "Filtrační plocha", "value": "0,18 – 0,69 m²" },
+        { "label": "Pracovní tlak", "value": "0 – 2,5 baru" },
+        { "label": "Výkon", "value": "5 – 25 litrů / hodinu" },
+        { "label": "Materiál", "value": "nerezová ocel" },
+        { "label": "Použití", "value": "rostlinné oleje, kosmetika, potravinářství" }
+      ]
+    },
+    "riftelen-n15": {
+      "name": "RIFTELEN N15",
+      "shortDescription": "Nanovlákenná filtrační membrána pro deskové filtry FILTREX.",
+      "description": "RIFTELEN® N15 je nanovlákenná filtrační membrána vyvinutá speciálně pro deskové filtry FILTREX D18 20/20. Membrána je chráněna užitným vzorem 31084.\n\nVýhody oproti klasické filtrační tkanině:\n– Výrazně menší tlaková ztráta – zvyšuje výkon deskového filtru\n– Šetrnější k filtrované tekutině – umožňuje filtraci při nižším tlaku\n– Větší prodyšnost – možnost vytlačení zbytkové tekutiny vzduchem po vytvoření filtračního koláče\n– Hydrofobní povrch – lépe se čistí\n– Nižší plošná hmotnost\n\nDostupná ve variantě N15–5 (zádržnost 5 µm) a N15–12 (zádržnost 12 µm).",
+      "parameters": [
+        { "label": "Typ", "value": "nanovlákenná filtrační membrána" },
+        { "label": "Kompatibilita", "value": "FILTREX D18 20/20" },
+        { "label": "Použití", "value": "rostlinné oleje, kosmetika" },
+        { "label": "Technologie", "value": "nanovlákno" },
+        { "label": "Varianta N15–5", "value": "zádržnost 5 µm, hmotnost 185 g/m²" },
+        { "label": "Varianta N15–12", "value": "zádržnost 12 µm, hmotnost 181 g/m²" },
+        { "label": "Ochrana", "value": "Užitný vzor 31084" }
+      ]
+    },
+    "filtrex-d11-4040": {
+      "name": "FILTREX D11 40/40",
+      "shortDescription": "Deskový filtr větší kapacity – ve vývoji, dostupný koncem roku.",
+      "description": "Deskový filtr FILTREX D11 40/40 je připravován jako výkonnější varianta pro větší objemy filtrace. Bude dostupný koncem tohoto roku.",
+      "parameters": []
+    }
   },
   "references": {
     "title": "Naši zákazníci",

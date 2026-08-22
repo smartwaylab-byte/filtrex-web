@@ -42,6 +42,41 @@
     "more": "More information",
     "back_to_inquiry": "Back to inquiry"
   },
+  "productContent": {
+    "filtrex-d18-2020": {
+      "name": "FILTREX D18 20/20",
+      "shortDescription": "Plate nanofiber filter made of stainless steel, for filtering vegetable oils and cosmetics.",
+      "description": "The FILTREX D18 20/20 plate filter is an industrial nanofiber filter (nanofilter) designed for filtering vegetable oils, cosmetics and other food-grade liquids. It uses the RIFTELEN N15 nanofiber filtration membrane to achieve high purity of the filtered product.\n\nA variable number of plates allows the filtration area to be adapted to specific production needs.\n\nThe hygienic stainless steel design meets the most demanding requirements of the food industry.",
+      "parameters": [
+        { "label": "Number of stainless steel plates", "value": "variable, 6 to 20" },
+        { "label": "Filtration area", "value": "0.18 – 0.69 m²" },
+        { "label": "Working pressure", "value": "0 – 2.5 bar" },
+        { "label": "Throughput", "value": "5 – 25 litres / hour" },
+        { "label": "Material", "value": "stainless steel" },
+        { "label": "Application", "value": "vegetable oils, cosmetics, food industry" }
+      ]
+    },
+    "riftelen-n15": {
+      "name": "RIFTELEN N15",
+      "shortDescription": "Nanofiber filtration membrane for FILTREX plate filters.",
+      "description": "RIFTELEN® N15 is a nanofiber filtration membrane developed specifically for the FILTREX D18 20/20 plate filters. The membrane is protected by utility model 31084.\n\nAdvantages over classic filter cloth:\n– Significantly lower pressure drop – increases the plate filter's throughput\n– Gentler on the filtered liquid – allows filtration at lower pressure\n– Higher air permeability – residual liquid can be pushed out with air after the filter cake has formed\n– Hydrophobic surface – easier to clean\n– Lower area weight\n\nAvailable in the N15–5 (5 µm retention) and N15–12 (12 µm retention) variants.",
+      "parameters": [
+        { "label": "Type", "value": "nanofiber filtration membrane" },
+        { "label": "Compatibility", "value": "FILTREX D18 20/20" },
+        { "label": "Application", "value": "vegetable oils, cosmetics" },
+        { "label": "Technology", "value": "nanofiber" },
+        { "label": "N15–5 variant", "value": "5 µm retention, weight 185 g/m²" },
+        { "label": "N15–12 variant", "value": "12 µm retention, weight 181 g/m²" },
+        { "label": "Protection", "value": "Utility model 31084" }
+      ]
+    },
+    "filtrex-d11-4040": {
+      "name": "FILTREX D11 40/40",
+      "shortDescription": "Higher-capacity plate filter – in development, available by the end of the year.",
+      "description": "The FILTREX D11 40/40 plate filter is being developed as a higher-performance variant for larger filtration volumes. It will be available by the end of this year.",
+      "parameters": []
+    }
+  },
   "references": {
     "title": "Our customers",
     "subtitle": "Our filtration is used by manufacturers in 7 countries",

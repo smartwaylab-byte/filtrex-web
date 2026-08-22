@@ -1,11 +1,10 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
-import { getProductBySlug, products } from '@/lib/products'
+import { getProductBySlug, localizeProduct, products } from '@/lib/products'
 import AddToCart from '@/components/products/AddToCart'
 import type { Metadata } from 'next'
-import { baseUrl, buildAlternates } from '@/lib/seo'
-import JsonLd from '@/components/seo/JsonLd'
+import { buildAlternates } from '@/lib/seo'
 
 export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }))
@@ -19,40 +18,33 @@ export async function generateMetadata({
   const { locale, slug } = await params
   const product = getProductBySlug(slug)
   if (!product) return {}
+  const tc = await getTranslations({ locale, namespace: 'productContent' })
+  const localized = localizeProduct(product, tc)
   return {
-    title: product.name,
-    description: product.shortDescription,
+    title: localized.name,
+    description: localized.shortDescription,
     alternates: buildAlternates(locale, `/produkty/${slug}`),
   }
 }
 
-export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
+export default async function ProductDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params
   const product = getProductBySlug(slug)
   if (!product) notFound()
 
   const t = await getTranslations('products')
-
-  const productSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.name,
-    description: product.shortDescription,
-    image: product.images.map((img) => `${baseUrl}${img}`),
-    sku: product.id,
-    brand: { '@type': 'Brand', name: 'Filtrex' },
-  }
+  const tc = await getTranslations({ locale, namespace: 'productContent' })
+  const localizedProduct = localizeProduct(product, tc)
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <JsonLd data={productSchema} />
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Images */}
         <div className="space-y-4">
           {product.images.length > 0 ? (
             product.images.map((src, i) => (
               <div key={i} className="aspect-[4/3] bg-gray-50 rounded-2xl overflow-hidden relative">
-                <Image src={src} alt={`${product.name} ${i + 1}`} fill className="object-contain p-6" />
+                <Image src={src} alt={`${localizedProduct.name} ${i + 1}`} fill className="object-contain p-6" />
               </div>
             ))
           ) : (
@@ -71,14 +63,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               {t('in_development')}
             </span>
           )}
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
-          <p className="text-gray-600 mb-8 leading-relaxed whitespace-pre-line">{product.description}</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">{localizedProduct.name}</h1>
+          <p className="text-gray-600 mb-8 leading-relaxed whitespace-pre-line">{localizedProduct.description}</p>
 
-          {product.parameters.length > 0 && (
+          {localizedProduct.parameters.length > 0 && (
             <div className="mb-8">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('parameters')}</h2>
               <div className="bg-gray-50 rounded-xl overflow-hidden">
-                {product.parameters.map((param, i) => (
+                {localizedProduct.parameters.map((param, i) => (
                   <div key={i} className={`flex justify-between px-4 py-3 text-sm ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
                     <span className="font-medium text-gray-700">{param.label}</span>
                     <span className="text-gray-900">{param.value}</span>
@@ -88,7 +80,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             </div>
           )}
 
-          {!product.inDevelopment && <AddToCart product={product} />}
+          {!product.inDevelopment && <AddToCart product={localizedProduct} />}
         </div>
       </div>
     </div>

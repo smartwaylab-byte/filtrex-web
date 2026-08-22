@@ -42,6 +42,41 @@
     "more": "Mehr Informationen",
     "back_to_inquiry": "Zurück zur Anfrage"
   },
+  "productContent": {
+    "filtrex-d18-2020": {
+      "name": "FILTREX D18 20/20",
+      "shortDescription": "Plattennanofaserfilter aus Edelstahl zur Filtration von pflanzlichen Ölen und Kosmetika.",
+      "description": "Der Plattenfilter FILTREX D18 20/20 ist ein industrieller Nanofaserfilter (Nanofilter) zur Filtration von pflanzlichen Ölen, Kosmetika und anderen Lebensmittelflüssigkeiten. Er nutzt die Nanofaser-Filtrationsmembran RIFTELEN N15, um eine hohe Reinheit des gefilterten Produkts zu erreichen.\n\nDie variable Plattenzahl ermöglicht es, die Filterfläche an die jeweiligen Anforderungen der Produktion anzupassen.\n\nDie hygienische Ausführung aus Edelstahl erfüllt die höchsten Anforderungen der Lebensmittelindustrie.",
+      "parameters": [
+        { "label": "Anzahl der Edelstahlplatten", "value": "variabel, 6 bis 20" },
+        { "label": "Filterfläche", "value": "0,18 – 0,69 m²" },
+        { "label": "Arbeitsdruck", "value": "0 – 2,5 bar" },
+        { "label": "Durchsatz", "value": "5 – 25 Liter / Stunde" },
+        { "label": "Material", "value": "Edelstahl" },
+        { "label": "Anwendung", "value": "pflanzliche Öle, Kosmetik, Lebensmittelindustrie" }
+      ]
+    },
+    "riftelen-n15": {
+      "name": "RIFTELEN N15",
+      "shortDescription": "Nanofaser-Filtrationsmembran für FILTREX-Plattenfilter.",
+      "description": "RIFTELEN® N15 ist eine speziell für die Plattenfilter FILTREX D18 20/20 entwickelte Nanofaser-Filtrationsmembran. Die Membran ist durch das Gebrauchsmuster 31084 geschützt.\n\nVorteile gegenüber klassischem Filtergewebe:\n– Deutlich geringerer Druckverlust – erhöht die Leistung des Plattenfilters\n– Schonender für die filtrierte Flüssigkeit – ermöglicht Filtration bei niedrigerem Druck\n– Höhere Luftdurchlässigkeit – Restflüssigkeit kann nach Bildung des Filterkuchens mit Luft ausgeblasen werden\n– Hydrophobe Oberfläche – lässt sich leichter reinigen\n– Geringeres Flächengewicht\n\nErhältlich in den Varianten N15–5 (Rückhaltevermögen 5 µm) und N15–12 (Rückhaltevermögen 12 µm).",
+      "parameters": [
+        { "label": "Typ", "value": "Nanofaser-Filtrationsmembran" },
+        { "label": "Kompatibilität", "value": "FILTREX D18 20/20" },
+        { "label": "Anwendung", "value": "pflanzliche Öle, Kosmetik" },
+        { "label": "Technologie", "value": "Nanofaser" },
+        { "label": "Variante N15–5", "value": "Rückhaltevermögen 5 µm, Gewicht 185 g/m²" },
+        { "label": "Variante N15–12", "value": "Rückhaltevermögen 12 µm, Gewicht 181 g/m²" },
+        { "label": "Schutz", "value": "Gebrauchsmuster 31084" }
+      ]
+    },
+    "filtrex-d11-4040": {
+      "name": "FILTREX D11 40/40",
+      "shortDescription": "Plattenfilter mit größerer Kapazität – in Entwicklung, verfügbar Ende des Jahres.",
+      "description": "Der Plattenfilter FILTREX D11 40/40 wird als leistungsfähigere Variante für größere Filtrationsvolumen entwickelt. Er wird noch in diesem Jahr verfügbar sein.",
+      "parameters": []
+    }
+  },
   "references": {
     "title": "Unsere Kunden",
     "subtitle": "Unsere Filtration wird von Herstellern in 7 Ländern verwendet",
