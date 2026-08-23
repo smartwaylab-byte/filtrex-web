@@ -31,7 +31,7 @@ export async function generateMetadata({
       template: '%s | Filtrex s.r.o.',
     },
     description: t('subheadline'),
-    keywords: ['filtrace', 'nanovlákno', 'deskový filtr', 'rostlinné oleje', 'kosmetika', 'potravinářství'],
+    keywords: ['filtrace', 'nanovlákno', 'nanovláknový filtr', 'nanofiltr', 'deskový filtr', 'rostlinné oleje', 'kosmetika', 'potravinářství'],
     alternates: buildAlternates(locale),
     openGraph: {
       siteName: 'Filtrex s.r.o.',
