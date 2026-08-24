@@ -9,8 +9,8 @@
     "cart": "Nabídka"
   },
   "hero": {
-    "headline": "Nanovláknový filtr FILTREX pro potravinářství",
-    "subheadline": "Náš nanovláknový filtr (nanofiltr) šetrně filtruje rostlinné oleje, kávu, nápoje a kosmetiku. Jsme první výrobce v ČR, který používá nanovlákno pro filtraci v potravinářství.",
+    "headline": "Deskové filtry s nanovláknem",
+    "subheadline": "Filtrujeme rostlinné oleje, kávu, nápoje a kosmetiku. Jsme první výrobce v ČR, který používá nanovlákno pro filtraci v potravinářství.",
     "cta_primary": "Prohlédnout produkty",
     "cta_secondary": "Nezávazná poptávka",
     "stat_experience": "let zkušeností",
@@ -20,7 +20,7 @@
   },
   "about": {
     "title": "Kdo jsme",
-    "description": "Firma FILTREX s.r.o. se v roce 1991 transformovala z výrobního družstva DÍLO Svratouch a zaměřila se na vývoj a výrobu deskových filtrů s tkanou filtrační plachetkou nebo celulózovou deskou především pro potravinářství.\n\nSnaha zlepšit parametry našich zařízení nás vedla k hledání možností využít nové technologie výroby netkaných textilií s nanovlákenou membránou – tedy nanovláknový filtr (nanofiltr).\n\nJiž od roku 2017 nabízíme svým zákazníkům jako filtrační materiál námi vyvinutou nanovlákennou membránu RIFTELEN N15. Tato membrána se osvědčila hlavně při filtraci rostlinných olejů, postupně však nachází uplatnění i v dalších oblastech jako je filtrace kávy, nápojů nebo kosmetiky. Zákazníci si toto řešení vybírají především proto, že umožňuje provoz při nízkém tlaku, zachová senzorické vlastnosti a barvu filtrovaného produktu. Filtrační materiál není nasákavý a lze jej regenerovat.\n\nFiltrace nanovláknem je zajímavou alternativou tam, kde klasická filtrace nevyhovuje.",
+    "description": "Firma FILTREX s.r.o. se v roce 1991 transformovala z výrobního družstva DÍLO Svratouch a zaměřila se na vývoj a výrobu deskových filtrů s tkanou filtrační plachetkou nebo celulózovou deskou především pro potravinářství.\n\nSnaha zlepšit parametry našich zařízení nás vedla k hledání možností využít nové technologie výroby netkaných textilií s nanovlákenou membránou.\n\nJiž od roku 2017 nabízíme svým zákazníkům jako filtrační materiál námi vyvinutou nanovlákennou membránu RIFTELEN N15. Tato membrána se osvědčila hlavně při filtraci rostlinných olejů, postupně však nachází uplatnění i v dalších oblastech jako je filtrace kávy, nápojů nebo kosmetiky. Zákazníci si toto řešení vybírají především proto, že umožňuje provoz při nízkém tlaku, zachová senzorické vlastnosti a barvu filtrovaného produktu. Filtrační materiál není nasákavý a lze jej regenerovat.\n\nFiltrace nanovláknem je zajímavou alternativou tam, kde klasická filtrace nevyhovuje.",
     "badge": "První filtrace v ČR s nanovláknem v potravinářství",
     "point1": "Filtrace rostlinných olejů",
     "point2": "Filtrace kávy a nápojů",
@@ -29,7 +29,7 @@
   },
   "products": {
     "title": "Naše produkty",
-    "subtitle": "Nanovláknový filtr přináší efektivnější filtraci",
+    "subtitle": "Nanovlákno přináší efektivnější filtraci",
     "view_all": "Zobrazit všechny produkty",
     "add_to_cart": "Přidat do poptávky",
     "buy": "Koupit",

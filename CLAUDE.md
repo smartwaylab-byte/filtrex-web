@@ -105,10 +105,12 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-...
 ```powershell
 # Dev server
 npm run dev
-
-# Nasadit na Vercel
-npx vercel --prod
 ```
+
+**Nikdy nenasazovat přímo (`npx vercel --prod` / `vercel deploy --prod` apod.).** Nasazení jde vždy jen přes `git commit` + `git push` na `origin/main` – Vercel je napojený na GitHub repo a nasadí se z pushnutého commitu sám. Přímé nasazení obchází git historii a při dalším git-triggered deployi se tiše přepíše (viz commit `41177cf` – přímý deploy z 1. 8. 2026 takhle zmizel z produkce).
+
+### Rozsah zásahu u úzce zadaných úkolů
+Pokud je úkol úzce zadaný (např. "doplň klíčová slova do textu produktu", "priprav lokalizaci"), **neprovádět kvůli tomu širší viditelné změny firemního sdělení** – zejména hlavní nadpis/podnadpis homepage (`hero.headline`/`hero.subheadline`), title/meta description, ani další marketingové texty mimo zadaný rozsah – bez toho, že se to napřed odsouhlasí s klientem/uživatelem a počká se na potvrzení. Platí i když je změna "jen" přidání klíčového slova do věty – pokud mění viditelný text, patří do samostatného schváleného kroku, ne jako vedlejší produkt jiného úkolu.
 
 ### Důležité konvence (Next.js 16)
 - Middleware = `src/proxy.ts` s named exportem `proxy` (ne `middleware.ts`)
