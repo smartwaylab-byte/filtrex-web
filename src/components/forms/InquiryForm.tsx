@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useCartStore } from '@/store/cart'
+import { trackQualifyLead } from '@/lib/analytics'
 
 const schema = z.object({
   company: z.string().min(2),
@@ -26,12 +27,16 @@ export default function InquiryForm() {
   const prefix = locale === 'cs' ? '' : `/${locale}`
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const { items, removeItem, updateQuantity, clearCart } = useCartStore()
+  // Ať se GA4 key event `qualify_lead` pošle max. jednou za jedno odeslání
+  // (ochrana proti double-clicku / opakovanému submitu).
+  const leadTrackedRef = useRef(false)
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
   })
 
   async function onSubmit(data: FormData) {
+    if (status === 'sending') return
     setStatus('sending')
     const productsList = items.length > 0
       ? `Vybrané produkty:\n${items.map((i) => `• ${i.name}: ${i.quantity} ks`).join('\n')}`
@@ -50,6 +55,14 @@ export default function InquiryForm() {
       body: JSON.stringify({ ...data, message: fullMessage }),
     })
     if (res.ok) {
+      // GA4 key event (konverze) – až po potvrzené úspěšné odpovědi z /api/poptavka.
+      if (!leadTrackedRef.current) {
+        leadTrackedRef.current = true
+        trackQualifyLead({
+          form_location: 'poptavka',
+          product_name: items.length > 0 ? items.map((i) => i.name).join(', ') : undefined,
+        })
+      }
       clearCart()
       setStatus('success')
       reset()
@@ -131,7 +144,7 @@ export default function InquiryForm() {
       )}
 
       {/* Kontaktní formulář */}
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+      <form onSubmit={(e) => handleSubmit(onSubmit)(e)} className="space-y-5">
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
             <label className={labelClass}>{t('volume')}</label>

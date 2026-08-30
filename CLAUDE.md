@@ -84,7 +84,8 @@
 - [x] Per-page metadata (title/description) – homepage dědí z layoutu (stejný text), ostatní (produkty, produkty/[slug], aktuality, aktuality/[slug], reference, kontakt, poptavka) mají vlastní `generateMetadata`
 - [x] Strukturovaná data (JSON-LD) – Organization (site-wide v layoutu), Product (detail produktu), BlogPosting (detail aktuality) – `src/components/seo/JsonLd.tsx` + `src/lib/seo.ts`
 - [x] `llms.txt` – `public/llms.txt`, stručný přehled firmy a hlavních sekcí webu (jen česká verze)
-- [x] Analytics – Vercel Analytics (nasazeno) + Google Analytics 4 (`@next/third-parties`, `GoogleAnalytics` komponenta v `src/app/[locale]/layout.tsx`, ID v `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
+- [x] Analytics – Vercel Analytics (nasazeno) + Google Analytics 4 (`@next/third-parties`, `GoogleAnalytics` komponenta načtená v `src/components/cookies/CookieConsent.tsx` až po souhlasu s cookies, ID v `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
+- [x] GA4 key event `qualify_lead` (konverze) – `src/lib/analytics.ts` (`trackQualifyLead`), volá se po potvrzené `res.ok` odpovědi z API v `InquiryForm` (`form_location: 'poptavka'` + `product_name` z košíku) a `ContactForm` (`form_location: 'kontakt'`); dedupe přes `leadTrackedRef`, bezpečné i bez GA (adblock). Eventy `close_convert_lead` / `purchase` se řeší mimo web (ručně).
 - [ ] GA4 – založit property na analytics.google.com, doplnit `NEXT_PUBLIC_GA_MEASUREMENT_ID`, nasdílet přístup klientovi (mimo kód, ručně přes Google účet klienta)
 
 ## Poznámky pro vývoj

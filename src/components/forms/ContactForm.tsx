@@ -1,10 +1,11 @@
 ﻿'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { trackQualifyLead } from '@/lib/analytics'
 
 const schema = z.object({
   name: z.string().min(2),
@@ -17,20 +18,33 @@ type FormData = z.infer<typeof schema>
 export default function ContactForm() {
   const t = useTranslations('contact')
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  // Ať se GA4 key event `qualify_lead` pošle max. jednou za jedno odeslání
+  // (ochrana proti double-clicku / opakovanému submitu).
+  const leadTrackedRef = useRef(false)
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
   })
 
   async function onSubmit(data: FormData) {
+    if (status === 'sending') return
     setStatus('sending')
     const res = await fetch('/api/kontakt', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
-    if (res.ok) { setStatus('success'); reset() }
-    else setStatus('error')
+    if (res.ok) {
+      // GA4 key event (konverze) – až po potvrzené úspěšné odpovědi z /api/kontakt.
+      if (!leadTrackedRef.current) {
+        leadTrackedRef.current = true
+        trackQualifyLead({ form_location: 'kontakt' })
+      }
+      setStatus('success')
+      reset()
+    } else {
+      setStatus('error')
+    }
   }
 
   const inputClass = 'w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-gray-900 bg-white'
@@ -51,7 +65,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+    <form onSubmit={(e) => handleSubmit(onSubmit)(e)} className="space-y-5">
       <div>
         <label className={labelClass}>{t('name')} *</label>
         <input {...register('name')} className={inputClass} />
