@@ -2,10 +2,9 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { urlFor } from '@/lib/sanity/client'
-import type { Post } from '@/lib/sanity/queries'
+import PostImageGrid from '@/components/blog/PostImageGrid'
+import { postImages, type Post } from '@/lib/sanity/queries'
 
 const PAGE_SIZE = 6
 
@@ -18,21 +17,21 @@ export default function AktualityList({ posts, prefix }: { posts: Post[]; prefix
   return (
     <>
       <div className="grid md:grid-cols-2 gap-8">
-        {visiblePosts.map((post) => (
+        {visiblePosts.map((post) => {
+          const images = postImages(post)
+          return (
           <Link
             key={post._id}
             href={`${prefix}/aktuality/${post.slug.current}`}
             className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-brand/40 hover:shadow-lg transition-all"
           >
-            {post.mainImage && (
-              <div className="aspect-[16/9] relative overflow-hidden bg-gray-100">
-                <Image
-                  src={urlFor(post.mainImage).width(800).height(450).url()}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
+            {images.length > 0 && (
+              <PostImageGrid
+                images={images}
+                alt={post.title}
+                hoverZoom
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
             )}
             <div className="p-6">
               <p className="text-sm text-gray-400 mb-2">
@@ -50,7 +49,8 @@ export default function AktualityList({ posts, prefix }: { posts: Post[]; prefix
               </span>
             </div>
           </Link>
-        ))}
+          )
+        })}
       </div>
 
       {hasMore && (
