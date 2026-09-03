@@ -14,17 +14,18 @@ export const postSchema = defineType({
       title: 'Obrázky',
       type: 'array',
       of: [{ type: 'image', options: { hotspot: true } }],
-      options: { layout: 'grid' },
       validation: (R) => R.max(4),
       description:
-        '1 až 4 fotky. Jedna fotka vyplní celou plochu. Dvě se zobrazí vedle sebe, tři nebo čtyři se rozdělí do mřížky ve stejném prostoru. Pořadí lze měnit tažením.',
+        '1 až 4 fotky. Přidávej je tlačítkem „Add item“ jednu po druhé. Jedna fotka vyplní celou plochu, dvě se zobrazí vedle sebe, tři nebo čtyři se rozdělí do mřížky ve stejném prostoru. Pořadí lze měnit tažením.',
     }),
     defineField({
       name: 'mainImage',
-      title: 'Hlavní obrázek (starší – použij raději pole „Obrázky“ výše)',
+      title: 'Hlavní obrázek (původní pole)',
       type: 'image',
       options: { hotspot: true },
-      hidden: ({ document }) => Array.isArray(document?.images) && document.images.length > 0,
+      description:
+        'Používá se jen u starších příspěvků. Pokud je pole „Obrázky“ výše vyplněné, tenhle obrázek se na webu nepoužije – klidně ho sem přesuň a toto pole nech prázdné.',
+      hidden: ({ value }) => !value,
     }),
     defineField({
       name: 'videoUrl',
