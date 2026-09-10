@@ -55,9 +55,9 @@
 ### API klíče (nutné pro ostrý provoz)
 - [ ] **Stripe** – nastavit `STRIPE_SECRET_KEY` a `STRIPE_WEBHOOK_SECRET` v Vercel → Settings → Environment Variables
 - [ ] **Stripe** – vytvořit produkty/ceny v Stripe Dashboard a doplnit `stripePriceId` do `src/lib/products.ts`
-- [ ] **Resend** – nastavit `RESEND_API_KEY` v Vercel (emaily z kontaktního formuláře a poptávky)
-- [ ] **Sanity** – spustit `npx sanity init`, vyplnit `NEXT_PUBLIC_SANITY_PROJECT_ID` a `NEXT_PUBLIC_SANITY_DATASET`
-- [ ] **BASE URL** – nastavit `NEXT_PUBLIC_BASE_URL` na skutečnou doménu
+- [x] **Resend** – `RESEND_API_KEY` + `CONTACT_EMAIL` (`info@filtrex.cz`) nastaveny v Vercel Production (ověřeno 2026-09-10 přes `vercel env ls production`)
+- [x] **Sanity** – `NEXT_PUBLIC_SANITY_PROJECT_ID` a `NEXT_PUBLIC_SANITY_DATASET` nastaveny v Vercel Production
+- [x] **BASE URL** – `NEXT_PUBLIC_BASE_URL` nastaveno v Vercel Production
 
 ### Design a barvy
 - [ ] Ověřit firemní barvy (zelená #15803d / Tailwind `green-700` – zatím odhadnuto)
@@ -86,7 +86,8 @@
 - [x] `llms.txt` – `public/llms.txt`, stručný přehled firmy a hlavních sekcí webu (jen česká verze)
 - [x] Analytics – Vercel Analytics (nasazeno) + Google Analytics 4 (`@next/third-parties`, `GoogleAnalytics` komponenta načtená v `src/components/cookies/CookieConsent.tsx` až po souhlasu s cookies, ID v `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
 - [x] GA4 key event `qualify_lead` (konverze) – `src/lib/analytics.ts` (`trackQualifyLead`), volá se po potvrzené `res.ok` odpovědi z API v `InquiryForm` (`form_location: 'poptavka'` + `product_name` z košíku) a `ContactForm` (`form_location: 'kontakt'`); dedupe přes `leadTrackedRef`, bezpečné i bez GA (adblock). Eventy `close_convert_lead` / `purchase` se řeší mimo web (ručně).
-- [ ] GA4 – založit property na analytics.google.com, doplnit `NEXT_PUBLIC_GA_MEASUREMENT_ID`, nasdílet přístup klientovi (mimo kód, ručně přes Google účet klienta)
+- [x] GA4 – property `Filtrex-web` založena, `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-E1DFEHKE3N` nastaveno v Vercel Production (ověřeno 2026-09-10). Klíčová událost (konverze) = `qualify_lead`, tam se objeví odeslané poptávky i kontaktní zprávy (parametr `form_location`).
+- [ ] GA4 – nasdílet přístup do property klientovi (mimo kód, ručně přes Google účet klienta)
 
 ## Poznámky pro vývoj
 
