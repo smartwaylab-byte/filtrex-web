@@ -15,6 +15,7 @@ const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   phone: z.string().optional(),
+  country: z.string().min(2),
   volume: z.string().optional(),
   liquid: z.string().optional(),
   message: z.string().min(0),
@@ -178,6 +179,11 @@ export default function InquiryForm() {
             <label className={labelClass}>{t('phone')}</label>
             <input {...register('phone')} type="tel" className={inputClass} />
           </div>
+        </div>
+        <div>
+          <label className={labelClass}>{t('country')} *</label>
+          <input {...register('country')} className={inputClass} />
+          {errors.country && <p className={errorClass}>Vyplňte prosím zemi</p>}
         </div>
         <div>
           <label className={labelClass}>{t('message')}{items.length === 0 && ' *'}</label>

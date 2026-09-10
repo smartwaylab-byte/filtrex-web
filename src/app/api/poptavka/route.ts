@@ -7,6 +7,7 @@ const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   phone: z.string().optional(),
+  country: z.string().min(2),
   product: z.string().optional(),
   volume: z.string().optional(),
   liquid: z.string().optional(),
@@ -18,7 +19,7 @@ export async function POST(req: NextRequest) {
   const parsed = schema.safeParse(body)
   if (!parsed.success) return NextResponse.json({ error: 'Invalid data' }, { status: 400 })
 
-  const { company, name, email, phone, product, volume, liquid, message } = parsed.data
+  const { company, name, email, phone, country, product, volume, liquid, message } = parsed.data
 
   const resend = getResend()
   const { error } = await resend.emails.send({
@@ -32,6 +33,7 @@ export async function POST(req: NextRequest) {
       <p><strong>Kontaktní osoba:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       ${phone ? `<p><strong>Telefon:</strong> ${phone}</p>` : ''}
+      <p><strong>Země:</strong> ${country}</p>
       ${product ? `<p><strong>Produkt:</strong> ${product}</p>` : ''}
       ${volume ? `<p><strong>Objem filtrace:</strong> ${volume}</p>` : ''}
       ${liquid ? `<p><strong>Filtrovaná tekutina:</strong> ${liquid}</p>` : ''}

@@ -13,7 +13,7 @@ export default function CartPage() {
   const prefix = locale === 'cs' ? '' : `/${locale}`
   const { items, removeItem, updateQuantity, clearCart } = useCartStore()
 
-  const [form, setForm] = useState({ company: '', name: '', email: '', phone: '', message: '' })
+  const [form, setForm] = useState({ company: '', name: '', email: '', phone: '', country: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   async function handleSubmit(e: React.FormEvent) {
@@ -151,6 +151,17 @@ export default function CartPage() {
                 type="tel"
                 value={form.phone}
                 onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{tInq('country')} *</label>
+              <input
+                type="text"
+                required
+                minLength={2}
+                value={form.country}
+                onChange={(e) => setForm((f) => ({ ...f, country: e.target.value }))}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand"
               />
             </div>

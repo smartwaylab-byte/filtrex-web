@@ -11,6 +11,7 @@ const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   phone: z.string().optional(),
+  country: z.string().min(2),
   message: z.string().min(10),
 })
 type FormData = z.infer<typeof schema>
@@ -79,6 +80,11 @@ export default function ContactForm() {
       <div>
         <label className={labelClass}>{t('phone')}</label>
         <input {...register('phone')} type="tel" className={inputClass} />
+      </div>
+      <div>
+        <label className={labelClass}>{t('country')} *</label>
+        <input {...register('country')} className={inputClass} />
+        {errors.country && <p className={errorClass}>Vyplňte prosím zemi</p>}
       </div>
       <div>
         <label className={labelClass}>{t('message')} *</label>
