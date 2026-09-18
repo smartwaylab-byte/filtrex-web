@@ -28,7 +28,7 @@
 - [x] Produkty listing (`/produkty`)
 - [x] Produktový detail (`/produkty/[slug]`) – výběr kusů, přidat do košíku
 - [x] Košík (`/kosik`) – zobrazení položek, úprava množství, checkout
-- [x] Reference (`/reference`) – 12 zákazníků, 5 zemí
+- [x] Reference (`/reference`) – 31 zákazníků, 8 zemí
 - [x] Aktuality (`/aktuality`) – napojeno na Sanity, fallback při chybějícím API
 - [x] Kontakt (`/kontakt`) – formulář s validací
 - [x] Poptávka (`/poptavka`) – formulář s validací

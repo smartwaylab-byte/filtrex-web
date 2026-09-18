@@ -48,6 +48,7 @@ const references = [
   { name: 'SARKAR', url: 'https://sarkar.co', country: 'IN', category: 'Rostlinné oleje' },
   { name: 'CANAH INTERNATIONAL S.R.L.', url: 'https://www.canah.com', country: 'RO', category: 'Rostlinné oleje' },
   { name: 'Dhaka Dough', url: 'https://dhakadough.com', country: 'BD', category: 'Rostlinné oleje' },
+  { name: 'ZERNOFF BEVERAGES SRL', url: 'https://www.zernoff.vodka/', country: 'MD', category: 'Lihoviny' },
 ]
 
 const countryLabel: Record<string, string> = {
@@ -58,6 +59,7 @@ const countryLabel: Record<string, string> = {
   IN: 'Indie',
   RO: 'Rumunsko',
   BD: 'Bangladéš',
+  MD: 'Moldavsko',
 }
 
 const countryFlagUrl: Record<string, string> = {
@@ -68,6 +70,7 @@ const countryFlagUrl: Record<string, string> = {
   IN: 'https://flagcdn.com/32x24/in.png',
   RO: 'https://flagcdn.com/32x24/ro.png',
   BD: 'https://flagcdn.com/32x24/bd.png',
+  MD: 'https://flagcdn.com/32x24/md.png',
 }
 
 const byCountry = references.reduce<Record<string, typeof references>>((acc, ref) => {
