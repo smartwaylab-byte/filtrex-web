@@ -49,6 +49,8 @@ const references = [
   { name: 'CANAH INTERNATIONAL S.R.L.', url: 'https://www.canah.com', country: 'RO', category: 'Rostlinné oleje' },
   { name: 'Dhaka Dough', url: 'https://dhakadough.com', country: 'BD', category: 'Rostlinné oleje' },
   { name: 'ZERNOFF BEVERAGES SRL', url: 'https://www.zernoff.vodka/', country: 'MD', category: 'Lihoviny' },
+  { name: 'The Oil Barn', url: 'https://www.facebook.com/theoilbarnmt', country: 'US', category: 'Rostlinné oleje' },
+  { name: 'Sillehof', url: 'https://sillehof.com/', country: 'AT', category: 'Rostlinné oleje' },
 ]
 
 const countryLabel: Record<string, string> = {
@@ -60,6 +62,8 @@ const countryLabel: Record<string, string> = {
   RO: 'Rumunsko',
   BD: 'Bangladéš',
   MD: 'Moldavsko',
+  US: 'USA',
+  AT: 'Rakousko',
 }
 
 const countryFlagUrl: Record<string, string> = {
@@ -71,6 +75,8 @@ const countryFlagUrl: Record<string, string> = {
   RO: 'https://flagcdn.com/32x24/ro.png',
   BD: 'https://flagcdn.com/32x24/bd.png',
   MD: 'https://flagcdn.com/32x24/md.png',
+  US: 'https://flagcdn.com/32x24/us.png',
+  AT: 'https://flagcdn.com/32x24/at.png',
 }
 
 const byCountry = references.reduce<Record<string, typeof references>>((acc, ref) => {
