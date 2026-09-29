@@ -23,7 +23,7 @@ export default function KontaktPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="grid lg:grid-cols-2 gap-16">
+      <div className="grid lg:grid-cols-2 gap-16 items-stretch">
         {/* Info */}
         <div className="flex flex-col">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
@@ -68,15 +68,18 @@ export default function KontaktPage() {
             </div>
           </div>
 
-          <div className="w-64 h-[158px] rounded-lg overflow-hidden border-4 border-brand-yellow mt-6 lg:mt-auto">
-            <iframe
-              style={{ border: 0 }}
-              src="https://www.google.com/maps?q=Lan%C5%A1krounsk%C3%A1+37%2C+568+02+Svitavy&output=embed"
-              width="100%"
-              height="100%"
-              loading="lazy"
-              title="Mapa – Filtrex s.r.o., Lanškrounská 37, Svitavy"
-            />
+          <div className="flex items-stretch gap-4 mt-10 lg:flex-1 lg:mb-8">
+            <div className="hidden lg:block w-10 flex-shrink-0" aria-hidden="true" />
+            <div className="w-full h-[260px] lg:h-auto lg:min-h-[220px] lg:max-w-[440px] rounded-xl overflow-hidden border-4 border-brand-yellow">
+              <iframe
+                style={{ border: 0 }}
+                src="https://www.google.com/maps?q=Lan%C5%A1krounsk%C3%A1+37%2C+568+02+Svitavy&output=embed"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                title="Mapa – Filtrex s.r.o., Lanškrounská 37, Svitavy"
+              />
+            </div>
           </div>
         </div>
 
