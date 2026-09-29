@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="mb-3 inline-block bg-white px-3 py-2">
+            <Link href={prefix || '/'} className="mb-3 inline-block bg-white px-3 py-2">
               <Image
                 src="/logo.jpg"
                 alt="Filtrex s.r.o."
@@ -22,7 +22,7 @@ export default function Footer() {
                 height={44}
                 className="h-8 w-auto object-contain"
               />
-            </div>
+            </Link>
             <p className="text-sm text-gray-400">{t('tagline')}</p>
             <p className="text-sm text-gray-400 mt-4">
               Filtrex s.r.o.<br />
@@ -34,18 +34,23 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="text-white font-semibold mb-3">{t('company')}</h3>
+            <h3 className="text-white font-semibold mb-3">
+              <Link href={prefix || '/'} className="hover:text-gray-300 transition-colors">{t('company')}</Link>
+            </h3>
             <ul className="space-y-2 text-sm">
               <li><Link href={`${prefix}/produkty`} className="hover:text-white transition-colors">{nt('products')}</Link></li>
               <li><Link href={`${prefix}/reference`} className="hover:text-white transition-colors">{nt('references')}</Link></li>
               <li><Link href={`${prefix}/aktuality`} className="hover:text-white transition-colors">{nt('news')}</Link></li>
               <li><Link href={`${prefix}/kontakt`} className="hover:text-white transition-colors">{nt('contact')}</Link></li>
+              <li><Link href={`${prefix}/obchodni-podminky`} className="hover:text-white transition-colors">{t('terms')}</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-3">{nt('contact')}</h3>
+            <h3 className="text-white font-semibold mb-3">
+              <Link href={`${prefix}/kontakt`} className="hover:text-gray-300 transition-colors">{nt('contact')}</Link>
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="tel:+420777134829" className="hover:text-white transition-colors">
@@ -64,13 +69,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
-          <span>© {new Date().getFullYear()} Filtrex s.r.o. {t('rights')}.</span>
-          <div className="flex gap-4">
-            <Link href={`${prefix}/ochrana-osobnich-udaju`} className="hover:text-gray-300 transition-colors">{t('privacy')}</Link>
-            <Link href={`${prefix}/obchodni-podminky`} className="hover:text-gray-300 transition-colors">{t('terms')}</Link>
-            <Link href={`${prefix}/copyright`} className="hover:text-gray-300 transition-colors">Copyright</Link>
-          </div>
+        <div className="border-t border-gray-800 mt-8 pt-6 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8 text-xs text-gray-500">
+          <span>
+            © {new Date().getFullYear()} Filtrex s.r.o.{' '}
+            <Link href={`${prefix}/copyright`} className="hover:text-gray-300 transition-colors">{t('rights')}</Link>.
+          </span>
+          <Link href={`${prefix}/ochrana-osobnich-udaju`} className="hover:text-gray-300 transition-colors">{t('privacy')}</Link>
+          <span>
+            Webdesign:{' '}
+            <a href="https://simplyway.cz" target="_blank" rel="noopener" className="hover:text-gray-300 transition-colors">
+              Simply Way
+            </a>
+          </span>
         </div>
       </div>
     </footer>
