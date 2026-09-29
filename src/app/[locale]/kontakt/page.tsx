@@ -25,33 +25,21 @@ export default function KontaktPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="grid lg:grid-cols-2 gap-16">
         {/* Info */}
-        <div>
+        <div className="flex flex-col">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
           <p className="text-lg text-gray-600 mb-10">{t('subtitle')}</p>
 
           <div className="space-y-6">
-            <div className="flex items-stretch justify-between gap-4">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">{t('address')}</p>
-                  <p className="text-gray-600 mt-1">Filtrex s.r.o.<br />Lanškrounská 37<br />568 02 Svitavy<br />Česká republika</p>
-                </div>
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
               </div>
-              <div className="w-64 rounded-lg overflow-hidden border-4 border-brand-yellow flex-shrink-0 hidden sm:block">
-                <iframe
-                  style={{ border: 0 }}
-                  src="https://www.google.com/maps?q=Lan%C5%A1krounsk%C3%A1+37%2C+568+02+Svitavy&output=embed"
-                  width="100%"
-                  height="100%"
-                  loading="lazy"
-                  title="Mapa – Filtrex s.r.o., Lanškrounská 37, Svitavy"
-                />
+              <div>
+                <p className="font-semibold text-gray-900">{t('address')}</p>
+                <p className="text-gray-600 mt-1">Filtrex s.r.o.<br />Lanškrounská 37<br />568 02 Svitavy<br />Česká republika</p>
               </div>
             </div>
 
@@ -78,6 +66,17 @@ export default function KontaktPage() {
                 <a href="mailto:info@filtrex.cz" className="text-brand hover:text-brand-dark mt-1 block">info@filtrex.cz</a>
               </div>
             </div>
+          </div>
+
+          <div className="w-64 h-[158px] rounded-lg overflow-hidden border-4 border-brand-yellow mt-6 lg:mt-auto">
+            <iframe
+              style={{ border: 0 }}
+              src="https://www.google.com/maps?q=Lan%C5%A1krounsk%C3%A1+37%2C+568+02+Svitavy&output=embed"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              title="Mapa – Filtrex s.r.o., Lanškrounská 37, Svitavy"
+            />
           </div>
         </div>
 
