@@ -43,7 +43,7 @@ export default function KontaktPage() {
                   <p className="text-gray-600 mt-1">Filtrex s.r.o.<br />Lanškrounská 37<br />568 02 Svitavy<br />Česká republika</p>
                 </div>
               </div>
-              <div className="w-64 rounded-lg overflow-hidden border-4 border-brand flex-shrink-0 hidden sm:block">
+              <div className="w-64 rounded-lg overflow-hidden border-4 border-brand-yellow flex-shrink-0 hidden sm:block">
                 <iframe
                   style={{ border: 0 }}
                   src="https://www.google.com/maps?q=Lan%C5%A1krounsk%C3%A1+37%2C+568+02+Svitavy&output=embed"
