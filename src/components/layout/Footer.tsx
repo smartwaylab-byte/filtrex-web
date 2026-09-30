@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href={prefix || '/'} className="mb-3 inline-block bg-white px-3 py-2">
               <Image
                 src="/logo.jpg"
-                alt="Filtrex s.r.o."
+                alt="FILTREX s.r.o."
                 width={120}
                 height={44}
                 className="h-8 w-auto object-contain"
@@ -25,7 +25,7 @@ export default function Footer() {
             </Link>
             <p className="text-sm text-gray-400">{t('tagline')}</p>
             <p className="text-sm text-gray-400 mt-4">
-              Filtrex s.r.o.<br />
+              FILTREX s.r.o.<br />
               Lanškrounská 37<br />
               568 02 Svitavy<br />
               Česká republika
@@ -71,7 +71,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-6 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8 text-xs text-gray-500">
           <span>
-            © {new Date().getFullYear()} Filtrex s.r.o.{' '}
+            © {new Date().getFullYear()} FILTREX s.r.o.{' '}
             <Link href={`${prefix}/copyright`} className="hover:text-gray-300 transition-colors">{t('rights')}</Link>.
           </span>
           <Link href={`${prefix}/ochrana-osobnich-udaju`} className="hover:text-gray-300 transition-colors">{t('privacy')}</Link>

@@ -39,7 +39,7 @@ export default function KontaktPage() {
               </div>
               <div>
                 <p className="font-semibold text-gray-900">{t('address')}</p>
-                <p className="text-gray-600 mt-1">Filtrex s.r.o.<br />Lanškrounská 37<br />568 02 Svitavy<br />Česká republika</p>
+                <p className="text-gray-600 mt-1">FILTREX s.r.o.<br />Lanškrounská 37<br />568 02 Svitavy<br />Česká republika</p>
               </div>
             </div>
 
@@ -77,7 +77,7 @@ export default function KontaktPage() {
                 width="100%"
                 height="100%"
                 loading="lazy"
-                title="Mapa – Filtrex s.r.o., Lanškrounská 37, Svitavy"
+                title="Mapa – FILTREX s.r.o., Lanškrounská 37, Svitavy"
               />
             </div>
           </div>
