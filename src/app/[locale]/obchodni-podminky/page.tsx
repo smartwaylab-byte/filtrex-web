@@ -1,6 +1,11 @@
+import BackButton from '@/components/navigation/BackButton'
+
 export default function ObchodniPodminkyPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6">
+        <BackButton fallbackHref="/" />
+      </div>
       <h1 className="text-4xl font-bold text-gray-900 mb-2">Všeobecné obchodní podmínky</h1>
       <p className="text-sm text-gray-500 mb-10">Filtrex s.r.o. &nbsp;|&nbsp; Účinné od: 1. 7. 2025 &nbsp;|&nbsp; Verze: 1.0</p>
 

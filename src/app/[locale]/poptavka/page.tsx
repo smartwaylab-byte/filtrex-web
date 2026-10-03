@@ -1,8 +1,9 @@
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import InquiryForm from '@/components/forms/InquiryForm'
-import { buildAlternates } from '@/lib/seo'
+import BackButton from '@/components/navigation/BackButton'
+import { buildAlternates, localizedPath } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -20,8 +21,12 @@ export async function generateMetadata({
 
 export default function PoptavkaPage() {
   const t = useTranslations('inquiry')
+  const locale = useLocale()
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6">
+        <BackButton fallbackHref={localizedPath(locale)} />
+      </div>
       <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
       <p className="text-lg text-gray-600 mb-10">{t('subtitle')}</p>
       <div className="bg-gray-50 rounded-2xl p-8">

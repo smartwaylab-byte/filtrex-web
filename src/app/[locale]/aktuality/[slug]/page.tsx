@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
+import BackButton from '@/components/navigation/BackButton'
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
 import { getPostBySlug, getPosts, postImages } from '@/lib/sanity/queries'
@@ -76,15 +76,9 @@ export default async function PostDetailPage({ params }: { params: Promise<{ slu
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <JsonLd data={postSchema} />
       <JsonLd data={breadcrumb} />
-      <Link
-        href={`${prefix}/aktuality`}
-        className="inline-flex items-center gap-1.5 text-brand text-sm font-medium hover:text-brand-dark mb-8"
-      >
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-        {t('back')}
-      </Link>
+      <div className="mb-8">
+        <BackButton fallbackHref={localizedPath(locale, '/aktuality')} />
+      </div>
 
       <p className="text-sm text-gray-400 mb-3">
         {new Date(post.publishedAt).toLocaleDateString('cs-CZ')}

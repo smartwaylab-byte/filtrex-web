@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useCartStore } from '@/store/cart'
+import BackButton from '@/components/navigation/BackButton'
 
 export default function CartPage() {
   const t = useTranslations('cart')
@@ -41,6 +42,9 @@ export default function CartPage() {
   if (status === 'success') {
     return (
       <div className="max-w-2xl mx-auto px-4 py-24 text-center">
+        <div className="mb-6 text-left">
+          <BackButton fallbackHref={prefix || '/'} />
+        </div>
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -57,6 +61,9 @@ export default function CartPage() {
   if (items.length === 0) {
     return (
       <div className="max-w-2xl mx-auto px-4 py-24 text-center">
+        <div className="mb-6 text-left">
+          <BackButton fallbackHref={prefix || '/'} />
+        </div>
         <svg className="w-20 h-20 mx-auto text-gray-300 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
         </svg>
@@ -70,6 +77,9 @@ export default function CartPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6">
+        <BackButton fallbackHref={prefix || '/'} />
+      </div>
       <h1 className="text-3xl font-bold text-gray-900 mb-10">{t('title')}</h1>
 
       {/* Vybrané produkty */}

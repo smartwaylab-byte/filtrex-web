@@ -4,6 +4,7 @@ import { getPosts } from '@/lib/sanity/queries'
 import AktualityList from '@/components/blog/AktualityList'
 import { buildAlternates, localizedPath } from '@/lib/seo'
 import Breadcrumbs from '@/components/seo/Breadcrumbs'
+import BackButton from '@/components/navigation/BackButton'
 
 export const revalidate = 60
 
@@ -37,6 +38,9 @@ export default async function AktualityPage() {
           { name: t('title'), path: localizedPath(locale, '/aktuality') },
         ]}
       />
+      <div className="mb-6">
+        <BackButton fallbackHref={localizedPath(locale)} />
+      </div>
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
         <p className="text-lg text-gray-600">{t('subtitle')}</p>

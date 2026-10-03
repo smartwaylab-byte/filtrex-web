@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import { localizeProducts } from '@/lib/products'
 import { buildAlternates, localizedPath } from '@/lib/seo'
 import Breadcrumbs from '@/components/seo/Breadcrumbs'
+import BackButton from '@/components/navigation/BackButton'
 
 export async function generateMetadata({
   params,
@@ -38,15 +39,9 @@ export default function ProductsPage() {
         ]}
       />
       <div className="mb-12">
-        <Link
-          href={`${prefix}/poptavka`}
-          className="inline-flex items-center gap-1 text-brand hover:text-brand-dark text-sm font-semibold mb-6"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          {t('back_to_inquiry')}
-        </Link>
+        <div className="mb-6">
+          <BackButton fallbackHref={localizedPath(locale)} />
+        </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
         <p className="text-lg text-gray-600">{t('subtitle')}</p>
       </div>
