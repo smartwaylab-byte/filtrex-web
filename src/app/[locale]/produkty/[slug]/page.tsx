@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import { buildAlternates, localizedPath, productSchema } from '@/lib/seo'
 import JsonLd from '@/components/seo/JsonLd'
 import Breadcrumbs from '@/components/seo/Breadcrumbs'
+import BackButton from '@/components/navigation/BackButton'
 
 export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }))
@@ -59,6 +60,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           { name: localizedProduct.name, path: productPath },
         ]}
       />
+      <div className="mb-8">
+        <BackButton fallbackHref={localizedPath(locale, '/produkty')} />
+      </div>
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Images */}
         <div className="space-y-4">

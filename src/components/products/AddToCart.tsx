@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { useCartStore } from '@/store/cart'
 import type { LocalizedProduct } from '@/lib/products'
-import BackButton from '@/components/navigation/BackButton'
+import Link from 'next/link'
 
 export default function AddToCart({ product }: { product: LocalizedProduct }) {
   const t = useTranslations('products')
@@ -58,7 +58,15 @@ export default function AddToCart({ product }: { product: LocalizedProduct }) {
         {added ? t('added_to_cart') : t('add_to_cart')}
       </button>
 
-      <BackButton fallbackHref={`${prefix}/produkty`} />
+      <Link
+        href={`${prefix}/poptavka`}
+        className="inline-flex items-center gap-1 text-brand hover:text-brand-dark text-sm font-semibold"
+      >
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+        {t('back_to_inquiry')}
+      </Link>
     </div>
   )
 }
