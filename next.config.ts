@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'cdn.sanity.io' },
       { protocol: 'https', hostname: 'www.filtrex.cz' },
+      { protocol: 'https', hostname: 'flagcdn.com' },
     ],
   },
   async redirects() {

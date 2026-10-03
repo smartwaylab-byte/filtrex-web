@@ -1,4 +1,5 @@
 ﻿import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslations, useLocale } from 'next-intl'
 
 const countries = [
@@ -47,8 +48,7 @@ export default function ReferencesSection() {
               href={`${prefix}/reference#${country.code}`}
               className="flex flex-col items-center text-center gap-2 bg-white rounded-xl border border-gray-200 p-4 hover:border-brand/40 hover:shadow-md transition-all group"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={countryFlagUrl[country.code]} alt={country.label} width={40} height={30} className="rounded-sm shadow-sm" />
+              <Image src={countryFlagUrl[country.code]} alt={country.label} width={40} height={30} className="rounded-sm shadow-sm" />
               <p className="font-semibold text-sm text-gray-900 group-hover:text-brand transition-colors">
                 {country.label}
               </p>

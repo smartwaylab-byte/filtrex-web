@@ -1,6 +1,7 @@
 ﻿import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { buildAlternates } from '@/lib/seo'
 
 export async function generateMetadata({
@@ -142,8 +143,7 @@ export default function ReferencePage() {
           <div key={country} id={country} className="scroll-mt-24">
             <h2 className="text-xl font-semibold text-gray-700 mb-4 pb-2 border-b border-gray-200 flex items-center gap-3">
               {countryFlagUrl[country] && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={countryFlagUrl[country]} alt={country} width={32} height={24} className="rounded-sm shadow-sm" />
+                <Image src={countryFlagUrl[country]} alt={country} width={32} height={24} className="rounded-sm shadow-sm" />
               )}
               {countryLabel[country] ?? country}
             </h2>
@@ -165,8 +165,7 @@ export default function ReferencePage() {
                     <div
                       className={`absolute bottom-4 right-4 rounded-xl border border-gray-100 bg-white flex items-center justify-center overflow-hidden shadow-sm transition-transform hover:scale-110 ${ref.wideLogo ? 'w-24 h-10' : 'w-14 h-14'}`}
                     >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={ref.logo} alt={`${ref.name} logo`} className="w-full h-full object-contain p-1.5" />
+                      <Image src={ref.logo} alt={`${ref.name} logo`} fill sizes="112px" className="object-contain p-1.5" />
                     </div>
                   ) : (
                     <div
