@@ -1,8 +1,9 @@
-﻿import { useTranslations } from 'next-intl'
+﻿import { useTranslations, useLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import ContactForm from '@/components/forms/ContactForm'
-import { buildAlternates } from '@/lib/seo'
+import BackButton from '@/components/navigation/BackButton'
+import { buildAlternates, localizedPath } from '@/lib/seo'
 
 export async function generateMetadata({
   params,
@@ -20,9 +21,13 @@ export async function generateMetadata({
 
 export default function KontaktPage() {
   const t = useTranslations('contact')
+  const locale = useLocale()
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-6">
+        <BackButton fallbackHref={localizedPath(locale)} />
+      </div>
       <div className="grid lg:grid-cols-2 gap-16 items-stretch">
         {/* Info */}
         <div className="flex flex-col">
