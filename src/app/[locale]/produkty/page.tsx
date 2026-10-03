@@ -4,7 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import { localizeProducts } from '@/lib/products'
-import { buildAlternates } from '@/lib/seo'
+import { buildAlternates, localizedPath } from '@/lib/seo'
+import Breadcrumbs from '@/components/seo/Breadcrumbs'
 
 export async function generateMetadata({
   params,
@@ -23,12 +24,19 @@ export async function generateMetadata({
 export default function ProductsPage() {
   const t = useTranslations('products')
   const tc = useTranslations('productContent')
+  const nt = useTranslations('nav')
   const locale = useLocale()
   const prefix = locale === 'cs' ? '' : `/${locale}`
   const products = localizeProducts(tc)
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <Breadcrumbs
+        items={[
+          { name: nt('home'), path: localizedPath(locale) },
+          { name: t('title'), path: localizedPath(locale, '/produkty') },
+        ]}
+      />
       <div className="mb-12">
         <Link
           href={`${prefix}/poptavka`}
