@@ -7,7 +7,7 @@ import { urlFor } from '@/lib/sanity/client'
 import { getVideoEmbedUrl } from '@/lib/video'
 import PortableTextBody from '@/components/blog/PortableTextBody'
 import PostImageGrid from '@/components/blog/PostImageGrid'
-import { baseUrl, buildAlternates, organizationSchema } from '@/lib/seo'
+import { baseUrl, breadcrumbSchema, buildAlternates, localizedPath, organizationSchema } from '@/lib/seo'
 import JsonLd from '@/components/seo/JsonLd'
 
 export const revalidate = 60
@@ -65,9 +65,17 @@ export default async function PostDetailPage({ params }: { params: Promise<{ slu
     mainEntityOfPage: `${baseUrl}${prefix}/aktuality/${slug}`,
   }
 
+  const nt = await getTranslations('nav')
+  const breadcrumb = breadcrumbSchema([
+    { name: nt('home'), path: localizedPath(locale) },
+    { name: t('title'), path: localizedPath(locale, '/aktuality') },
+    { name: post.title, path: localizedPath(locale, `/aktuality/${slug}`) },
+  ])
+
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <JsonLd data={postSchema} />
+      <JsonLd data={breadcrumb} />
       <Link
         href={`${prefix}/aktuality`}
         className="inline-flex items-center gap-1.5 text-brand text-sm font-medium hover:text-brand-dark mb-8"

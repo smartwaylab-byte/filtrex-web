@@ -4,7 +4,8 @@ import { getTranslations } from 'next-intl/server'
 import { getProductBySlug, localizeProduct, products } from '@/lib/products'
 import AddToCart from '@/components/products/AddToCart'
 import type { Metadata } from 'next'
-import { buildAlternates } from '@/lib/seo'
+import { breadcrumbSchema, buildAlternates, localizedPath, productSchema } from '@/lib/seo'
+import JsonLd from '@/components/seo/JsonLd'
 
 export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }))
@@ -36,8 +37,26 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const tc = await getTranslations({ locale, namespace: 'productContent' })
   const localizedProduct = localizeProduct(product, tc)
 
+  const nt = await getTranslations({ locale, namespace: 'nav' })
+  const productPath = localizedPath(locale, `/produkty/${slug}`)
+  const breadcrumb = breadcrumbSchema([
+    { name: nt('home'), path: localizedPath(locale) },
+    { name: nt('products'), path: localizedPath(locale, '/produkty') },
+    { name: localizedProduct.name, path: productPath },
+  ])
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <JsonLd
+        data={productSchema({
+          name: localizedProduct.name,
+          description: localizedProduct.shortDescription,
+          sku: product.id,
+          images: product.images,
+          path: productPath,
+        })}
+      />
+      <JsonLd data={breadcrumb} />
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Images */}
         <div className="space-y-4">

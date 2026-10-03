@@ -32,6 +32,45 @@ export function buildAlternates(locale: string, path = '') {
   }
 }
 
+export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: `${baseUrl}${item.path}`,
+    })),
+  }
+}
+
+// Bez `offers` záměrně: ceny produktů jsou zatím 0 / "Cena na dotaz" a Google by je četl jako skutečnou cenu
+export function productSchema({
+  name,
+  description,
+  sku,
+  images,
+  path,
+}: {
+  name: string
+  description: string
+  sku: string
+  images: string[]
+  path: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name,
+    description,
+    sku,
+    image: images.length ? images.map((src) => `${baseUrl}${src}`) : undefined,
+    brand: { '@type': 'Brand', name: 'Filtrex' },
+    url: `${baseUrl}${path}`,
+  }
+}
+
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
