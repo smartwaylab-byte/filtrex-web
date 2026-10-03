@@ -4,9 +4,9 @@
 
 ## Technologie
 
-- Next.js 16.2.6 (App Router, Turbopack)
+- Next.js 16.3.8 (App Router, Turbopack)
 - Tailwind CSS
-- next-intl v3 (6 jazyků: cs, en, de, es, it, pl)
+- next-intl v4 (6 jazyků: cs, en, de, es, it, pl)
 - Zustand (košík, persist do localStorage)
 - Stripe (platby – zatím bez API klíče)
 - Sanity v3 (blog – zatím bez project ID)
@@ -20,7 +20,7 @@
 - [x] Next.js projekt s App Routerem a Turbopackem
 - [x] i18n routing: `localePrefix: 'as-needed'`, `localeDetection: false`, default locale `cs`
 - [x] Middleware (`src/proxy.ts`) – Next.js 16 konvence, named export `proxy`
-- [x] Nasazení na Vercel (CLI: `npx vercel --prod`)
+- [x] Nasazení na Vercel přes GitHub (`git push` na `origin/main` → automatický deploy, viz "Nasazení" níže)
 - [x] GitHub repozitář (`smartwaylab-byte/filtrex-web`)
 
 ### Stránky
@@ -82,7 +82,9 @@
 - [x] OG image – dynamický přes `src/app/[locale]/opengraph-image.tsx` (next/og ImageResponse, brand barvy, per-locale headline)
 - [x] Canonical URL a hreflang – `src/lib/seo.ts` (`buildAlternates`), zapojeno do všech hlavních stránek
 - [x] Per-page metadata (title/description) – homepage dědí z layoutu (stejný text), ostatní (produkty, produkty/[slug], aktuality, aktuality/[slug], reference, kontakt, poptavka) mají vlastní `generateMetadata`
-- [x] Strukturovaná data (JSON-LD) – Organization (site-wide v layoutu), Product (detail produktu), BlogPosting (detail aktuality) – `src/components/seo/JsonLd.tsx` + `src/lib/seo.ts`
+- [x] Strukturovaná data (JSON-LD) – Organization (site-wide v layoutu), Product (detail produktu, bez `offers`, protože ceny nejsou nastavené), BreadcrumbList (detail produktu a aktuality), BlogPosting (detail aktuality) – `src/components/seo/JsonLd.tsx` + `src/lib/seo.ts`
+- [x] `www.filtrex.cz` → `filtrex.cz` 308 přesměrování – `next.config.ts` (`redirects`, podmínka na host `www.filtrex.cz`)
+- [x] Reference a homepage vlajky/loga přes `next/image` (vlajky z `flagcdn.com`, povolené v `remotePatterns`)
 - [x] `llms.txt` – `public/llms.txt`, stručný přehled firmy a hlavních sekcí webu (jen česká verze)
 - [x] Analytics – Vercel Analytics (nasazeno) + Google Analytics 4 (`@next/third-parties`, `GoogleAnalytics` komponenta načtená v `src/components/cookies/CookieConsent.tsx` až po souhlasu s cookies, ID v `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
 - [x] GA4 key event `qualify_lead` (konverze) – `src/lib/analytics.ts` (`trackQualifyLead`), volá se po potvrzené `res.ok` odpovědi z API v `InquiryForm` (`form_location: 'poptavka'` + `product_name` z košíku) a `ContactForm` (`form_location: 'kontakt'`); dedupe přes `leadTrackedRef`, bezpečné i bez GA (adblock). Eventy `close_convert_lead` / `purchase` se řeší mimo web (ručně).

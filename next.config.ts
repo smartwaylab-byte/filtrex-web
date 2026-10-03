@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Kanonický host je apex (filtrex.cz), www přesměrovat 301
+      { source: '/:path*', has: [{ type: 'host', value: 'www.filtrex.cz' }], destination: 'https://filtrex.cz/:path*', permanent: true },
+
       // Staré CZ stránky (/cs/*.html) z předchozího statického webu
       { source: '/cs/kontakt.html', destination: '/kontakt', permanent: true },
       { source: '/cs/o-nas.html', destination: '/', permanent: true },
