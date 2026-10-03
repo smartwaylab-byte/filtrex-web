@@ -1,26 +1,18 @@
 ﻿'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { useTranslations, useLocale } from 'next-intl'
 import { useCartStore } from '@/store/cart'
 import type { LocalizedProduct } from '@/lib/products'
+import BackButton from '@/components/navigation/BackButton'
 
 export default function AddToCart({ product }: { product: LocalizedProduct }) {
   const t = useTranslations('products')
-  const tCommon = useTranslations('common')
   const locale = useLocale()
-  const router = useRouter()
   const prefix = locale === 'cs' ? '' : `/${locale}`
   const addItem = useCartStore((s) => s.addItem)
   const [qty, setQty] = useState(1)
   const [added, setAdded] = useState(false)
-
-  // Zpět na předchozí stránku; při přímém otevření odkazu (žádná historie) přes přehled produktů
-  function handleBack() {
-    if (window.history.length > 1) router.back()
-    else router.push(`${prefix}/produkty`)
-  }
 
   function handleAdd() {
     addItem({
@@ -66,16 +58,7 @@ export default function AddToCart({ product }: { product: LocalizedProduct }) {
         {added ? t('added_to_cart') : t('add_to_cart')}
       </button>
 
-      <button
-        type="button"
-        onClick={handleBack}
-        className="inline-flex items-center gap-1 text-brand hover:text-brand-dark text-sm font-semibold"
-      >
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-        {tCommon('back')}
-      </button>
+      <BackButton fallbackHref={`${prefix}/produkty`} />
     </div>
   )
 }

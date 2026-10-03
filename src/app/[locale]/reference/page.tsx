@@ -1,8 +1,10 @@
-﻿import { useTranslations } from 'next-intl'
+﻿import { useTranslations, useLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { buildAlternates } from '@/lib/seo'
+import { buildAlternates, localizedPath } from '@/lib/seo'
+import Breadcrumbs from '@/components/seo/Breadcrumbs'
+import BackButton from '@/components/navigation/BackButton'
 
 export async function generateMetadata({
   params,
@@ -130,9 +132,20 @@ function getBadgeColor(name: string): string {
 
 export default function ReferencePage() {
   const t = useTranslations('references')
+  const nt = useTranslations('nav')
+  const locale = useLocale()
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <Breadcrumbs
+        items={[
+          { name: nt('home'), path: localizedPath(locale) },
+          { name: t('title'), path: localizedPath(locale, '/reference') },
+        ]}
+      />
+      <div className="mb-6">
+        <BackButton fallbackHref={localizedPath(locale)} />
+      </div>
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
         <p className="text-lg text-gray-600">{t('subtitle')}</p>
