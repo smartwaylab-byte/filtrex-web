@@ -35,7 +35,7 @@ export default function Header() {
           <Link href={prefix || '/'} className="flex items-center">
             <Image
               src="/logo.jpg"
-              alt="Filtrex s.r.o."
+              alt="FILTREX s.r.o."
               width={140}
               height={52}
               priority

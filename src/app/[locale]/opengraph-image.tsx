@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
-export const alt = 'Filtrex s.r.o. – Nanovlákenná filtrace pro potravinářství'
+export const alt = 'FILTREX s.r.o. – Nanovlákenná filtrace pro potravinářství'
 
 export default async function OpengraphImage({
   params,

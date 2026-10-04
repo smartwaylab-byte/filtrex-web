@@ -7,7 +7,7 @@ export default function OchranaOsobnichUdajuPage() {
         <BackButton fallbackHref="/" />
       </div>
       <h1 className="text-4xl font-bold text-gray-900 mb-2">Zásady ochrany osobních údajů</h1>
-      <p className="text-sm text-gray-500 mb-10">Filtrex s.r.o. &nbsp;|&nbsp; Účinné od: 1. 7. 2025 &nbsp;|&nbsp; Verze: 1.0</p>
+      <p className="text-sm text-gray-500 mb-10">FILTREX s.r.o. &nbsp;|&nbsp; Účinné od: 1. 7. 2025 &nbsp;|&nbsp; Verze: 1.0</p>
 
       <div className="space-y-8 text-gray-700 leading-relaxed">
 
@@ -18,14 +18,14 @@ export default function OchranaOsobnichUdajuPage() {
             o ochraně fyzických osob v souvislosti se zpracováním osobních údajů (dále jen „GDPR") je:
           </p>
           <address className="not-italic bg-gray-50 rounded-xl p-5 border border-gray-200 text-sm space-y-1">
-            <p className="font-semibold text-gray-900">Filtrex s.r.o.</p>
+            <p className="font-semibold text-gray-900">FILTREX s.r.o.</p>
             <p>Lanškrounská 37, 568 02 Svitavy, Česká republika</p>
             <p>IČO: 15034313 &nbsp;|&nbsp; DIČ: CZ15034313</p>
             <p>E-mail: <a href="mailto:info@filtrex.cz" className="text-brand hover:text-brand-dark">info@filtrex.cz</a></p>
             <p>Telefon: <a href="tel:+420777134829" className="text-brand hover:text-brand-dark">+420 777 134 829</a></p>
           </address>
           <p className="mt-3">
-            Společnost Filtrex s.r.o. nejmenovala pověřence pro ochranu osobních údajů (DPO), neboť jí tato povinnost
+            Společnost FILTREX s.r.o. nejmenovala pověřence pro ochranu osobních údajů (DPO), neboť jí tato povinnost
             nevzniká. Ve věcech ochrany osobních údajů kontaktujte výše uvedený e-mail.
           </p>
         </section>
@@ -195,7 +195,7 @@ export default function OchranaOsobnichUdajuPage() {
         </section>
 
         <p className="text-sm text-gray-500 border-t border-gray-200 pt-6 mt-10">
-          Filtrex s.r.o., Svitavy, červenec 2025
+          FILTREX s.r.o., Svitavy, červenec 2025
         </p>
       </div>
     </div>

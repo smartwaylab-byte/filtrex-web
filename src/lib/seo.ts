@@ -66,7 +66,7 @@ export function productSchema({
     description,
     sku,
     image: images.length ? images.map((src) => `${baseUrl}${src}`) : undefined,
-    brand: { '@type': 'Brand', name: 'Filtrex' },
+    brand: { '@type': 'Brand', name: 'FILTREX' },
     url: `${baseUrl}${path}`,
   }
 }
@@ -75,7 +75,7 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Filtrex s.r.o.',
+    name: 'FILTREX s.r.o.',
     url: baseUrl,
     logo: `${baseUrl}/logo.jpg`,
     address: {

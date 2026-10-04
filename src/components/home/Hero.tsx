@@ -20,7 +20,7 @@ export default function Hero() {
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow border border-brand-yellow text-gray-900 text-sm font-medium mb-6">
               <span className="w-2 h-2 rounded-full bg-gray-700 animate-pulse" />
-              Filtrex s.r.o.
+              FILTREX s.r.o.
             </span>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">

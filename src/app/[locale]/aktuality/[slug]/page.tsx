@@ -60,7 +60,7 @@ export default async function PostDetailPage({ params }: { params: Promise<{ slu
     description: post.excerpt,
     image: images.length ? images.map((img) => urlFor(img).width(1200).height(675).url()) : undefined,
     datePublished: post.publishedAt,
-    author: { '@type': 'Organization', name: 'Filtrex s.r.o.' },
+    author: { '@type': 'Organization', name: 'FILTREX s.r.o.' },
     publisher: organizationSchema(),
     mainEntityOfPage: `${baseUrl}${prefix}/aktuality/${slug}`,
   }

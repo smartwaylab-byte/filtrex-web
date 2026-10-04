@@ -7,7 +7,7 @@ export default function CopyrightPage() {
         <BackButton fallbackHref="/" />
       </div>
       <h1 className="text-4xl font-bold text-gray-900 mb-2">Copyright</h1>
-      <p className="text-sm text-gray-500 mb-10">Filtrex s.r.o.</p>
+      <p className="text-sm text-gray-500 mb-10">FILTREX s.r.o.</p>
 
       <div className="space-y-6 text-gray-700 leading-relaxed">
         <p>
@@ -16,12 +16,12 @@ export default function CopyrightPage() {
           na ochranu duševního vlastnictví.
         </p>
         <p>
-          Majetková autorská práva k obsahu webu vykonává společnost Filtrex s.r.o.,
+          Majetková autorská práva k obsahu webu vykonává společnost FILTREX s.r.o.,
           Lanškrounská 37, 568 02 Svitavy, IČO: 15034313.
         </p>
         <p>
           Jakékoli kopírování, šíření, zveřejňování nebo jiné užití obsahu těchto stránek —
-          ať celku, nebo jeho části — je bez předchozího písemného souhlasu společnosti Filtrex s.r.o. zakázáno.
+          ať celku, nebo jeho části — je bez předchozího písemného souhlasu společnosti FILTREX s.r.o. zakázáno.
         </p>
         <p>
           Pro dotazy týkající se užití obsahu nás kontaktujte na{' '}
@@ -29,7 +29,7 @@ export default function CopyrightPage() {
         </p>
 
         <p className="text-sm text-gray-500 border-t border-gray-200 pt-6 mt-10">
-          © {new Date().getFullYear()} Filtrex s.r.o. Všechna práva vyhrazena.
+          © {new Date().getFullYear()} FILTREX s.r.o. Všechna práva vyhrazena.
         </p>
       </div>
     </div>

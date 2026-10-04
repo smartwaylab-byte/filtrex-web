@@ -7,7 +7,7 @@ export default function ObchodniPodminkyPage() {
         <BackButton fallbackHref="/" />
       </div>
       <h1 className="text-4xl font-bold text-gray-900 mb-2">Všeobecné obchodní podmínky</h1>
-      <p className="text-sm text-gray-500 mb-10">Filtrex s.r.o. &nbsp;|&nbsp; Účinné od: 1. 7. 2025 &nbsp;|&nbsp; Verze: 1.0</p>
+      <p className="text-sm text-gray-500 mb-10">FILTREX s.r.o. &nbsp;|&nbsp; Účinné od: 1. 7. 2025 &nbsp;|&nbsp; Verze: 1.0</p>
 
       <div className="space-y-8 text-gray-700 leading-relaxed">
 
@@ -15,7 +15,7 @@ export default function ObchodniPodminkyPage() {
           <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Identifikace provozovatele</h2>
           <p className="mb-3">Provozovatelem webových stránek www.filtrex.cz je společnost:</p>
           <address className="not-italic bg-gray-50 rounded-xl p-5 border border-gray-200 text-sm space-y-1">
-            <p className="font-semibold text-gray-900">Filtrex s.r.o.</p>
+            <p className="font-semibold text-gray-900">FILTREX s.r.o.</p>
             <p>Sídlo: Lanškrounská 37, 568 02 Svitavy, Česká republika</p>
             <p>IČO: 15034313 &nbsp;|&nbsp; DIČ: CZ15034313</p>
             <p>E-mail: <a href="mailto:info@filtrex.cz" className="text-brand hover:text-brand-dark">info@filtrex.cz</a></p>
@@ -26,7 +26,7 @@ export default function ObchodniPodminkyPage() {
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-3">2. Úvodní ustanovení a platnost podmínek</h2>
           <p className="mb-3">
-            Tyto všeobecné obchodní podmínky (dále jen „VOP") upravují vzájemná práva a povinnosti mezi společností Filtrex s.r.o.
+            Tyto všeobecné obchodní podmínky (dále jen „VOP") upravují vzájemná práva a povinnosti mezi společností FILTREX s.r.o.
             (dále jen „prodávající" nebo „společnost") a fyzickými nebo právnickými osobami, které prostřednictvím webových stránek
             www.filtrex.cz zasílají poptávku po produktech nebo službách (dále jen „zájemce").
           </p>
@@ -44,7 +44,7 @@ export default function ObchodniPodminkyPage() {
           <h2 className="text-xl font-semibold text-gray-900 mb-3">3. Poptávkový formulář a nezávaznost poptávky</h2>
           <p className="mb-3">
             Poptávkový formulář umístěný na webových stránkách www.filtrex.cz slouží výhradně k zaslání nezávazné poptávky zájemce
-            o produkty nebo služby společnosti Filtrex s.r.o.
+            o produkty nebo služby společnosti FILTREX s.r.o.
           </p>
           <p className="mb-2">Odesláním poptávkového formuláře zájemce prohlašuje, že:</p>
           <ul className="list-disc list-inside space-y-1 pl-2 mb-3">
@@ -109,7 +109,7 @@ export default function ObchodniPodminkyPage() {
           <h2 className="text-xl font-semibold text-gray-900 mb-3">8. Ochrana duševního vlastnictví</h2>
           <p>
             Veškerý obsah webových stránek www.filtrex.cz (texty, fotografie, grafika, loga, technická dokumentace) je chráněn
-            autorským právem a je výhradním vlastnictvím společnosti Filtrex s.r.o. nebo třetích stran, které udělily souhlas
+            autorským právem a je výhradním vlastnictvím společnosti FILTREX s.r.o. nebo třetích stran, které udělily souhlas
             s jeho použitím. Jakékoli kopírování, šíření nebo jiné užití tohoto obsahu bez předchozího písemného souhlasu je zakázáno.
           </p>
         </section>
@@ -156,7 +156,7 @@ export default function ObchodniPodminkyPage() {
         </section>
 
         <p className="text-sm text-gray-500 border-t border-gray-200 pt-6 mt-10">
-          Filtrex s.r.o., Svitavy, červenec 2025
+          FILTREX s.r.o., Svitavy, červenec 2025
         </p>
       </div>
     </div>

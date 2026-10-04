@@ -28,13 +28,13 @@ export async function generateMetadata({
     metadataBase: new URL(baseUrl),
     title: {
       default: t('headline'),
-      template: '%s | Filtrex s.r.o.',
+      template: '%s | FILTREX s.r.o.',
     },
     description: t('subheadline'),
     keywords: ['filtrace', 'nanovlákno', 'nanovláknový filtr', 'nanofiltr', 'deskový filtr', 'rostlinné oleje', 'kosmetika', 'potravinářství'],
     alternates: buildAlternates(locale),
     openGraph: {
-      siteName: 'Filtrex s.r.o.',
+      siteName: 'FILTREX s.r.o.',
       locale: ogLocale(locale),
       type: 'website',
     },
