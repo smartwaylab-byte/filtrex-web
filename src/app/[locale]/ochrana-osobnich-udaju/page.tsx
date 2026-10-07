@@ -1,4 +1,27 @@
+import type { Metadata } from 'next'
 import BackButton from '@/components/navigation/BackButton'
+import { routing } from '@/i18n/routing'
+import { buildAlternates, localizedPath } from '@/lib/seo'
+
+const path = '/ochrana-osobnich-udaju'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const isCs = locale === routing.defaultLocale
+
+  return {
+    title: 'Zásady ochrany osobních údajů',
+    description: 'Zásady ochrany osobních údajů (GDPR) společnosti FILTREX s.r.o.',
+    alternates: {
+      canonical: isCs ? buildAlternates(locale, path).canonical : localizedPath(routing.defaultLocale, path),
+    },
+    robots: isCs ? undefined : { index: false, follow: true },
+  }
+}
 
 export default function OchranaOsobnichUdajuPage() {
   return (
