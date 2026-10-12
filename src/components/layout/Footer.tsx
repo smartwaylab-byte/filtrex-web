@@ -77,7 +77,7 @@ export default function Footer() {
           <Link href={`${prefix}/ochrana-osobnich-udaju`} className="hover:text-gray-300 transition-colors">{t('privacy')}</Link>
           <span>
             Webdesign:{' '}
-            <a href="https://simplyway.cz" target="_blank" rel="noopener" className="hover:text-gray-300 transition-colors">
+            <a href="https://simply-way-web.vercel.app" target="_blank" rel="noopener" className="hover:text-gray-300 transition-colors">
               Simply Way
             </a>
           </span>
